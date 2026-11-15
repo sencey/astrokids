@@ -1,0 +1,193 @@
+{
+ "siteId": "connecting-ridge",
+ "nameTr": "Bağlantı Sırtı (Shackleton - de Gerlache)",
+ "nameEn": "Connecting Ridge (Shackleton - de Gerlache)",
+ "placeholder": false,
+ "size": 256,
+ "cellMeters": 70.3125,
+ "extentMeters": 18000,
+ "projection": "south polar stereographic",
+ "projectionNote": "LOLA/PGDA convention: true scale at the south pole, sphere R=1737400 m, x = rho*sin(lon_east), y = rho*cos(lon_east), x right / y up when looking down on the surface from above (not mirrored).",
+ "centerLatLon": [
+  -89.6682,
+  206.5651
+ ],
+ "centerPolarStereoM": [
+  -4500,
+  -9000
+ ],
+ "cornersLatLon": {
+  "nw": [
+   -89.5548,
+   270
+  ],
+  "ne": [
+   -89.8516,
+   90
+  ],
+  "sw": [
+   -89.258,
+   216.8699
+  ],
+  "se": [
+   -89.3881,
+   165.9638
+  ]
+ },
+ "gridNorthNote": "Grid north = +y of the polar stereographic plane = TOP of the map image (row 0). +col = +x = grid east (right); +row = grid south (down). Viewed from above the surface, not mirrored. Azimuth in sun/earth json = degrees clockwise from grid north (0 = image up, 90 = image right, 180 = down, 270 = left). Grid north is NOT geographic north: at a point with east longitude L, geographic north (away from the south pole) lies at grid azimuth = L (about 206.6 deg at the site centre, i.e. down-left); the south pole itself is just above the top edge (see poleGridPosition).",
+ "poleGridPosition": {
+  "col": 191.5,
+  "row": -0.5,
+  "note": "Cell-centre coordinates of the geographic south pole; outside the grid if <0 or >255."
+ },
+ "minElevM": -2447.6,
+ "maxElevM": 1958.1,
+ "referenceRadiusM": 1737400,
+ "files": {
+  "height": "height.bin",
+  "illum": "illum.bin",
+  "psr": "psr.bin",
+  "lit": "lit-may-2024.bin"
+ },
+ "fileFormats": {
+  "height": "Float32 LE, N*N row-major, metres relative to 1737400 m sphere",
+  "illum": "Uint8 N*N, percent 0-100, NASA LOLA average illumination (bilinear resampled)",
+  "psr": "Uint8 N*N, 1 = official LOLA permanently shadowed region",
+  "lit": "Uint8 D*N*N day-major, percent of the UTC day sunlit (computed)"
+ },
+ "days": [
+  "2024-05-08",
+  "2024-05-09",
+  "2024-05-10",
+  "2024-05-11",
+  "2024-05-12",
+  "2024-05-13",
+  "2024-05-14",
+  "2024-05-15",
+  "2024-05-16",
+  "2024-05-17",
+  "2024-05-18",
+  "2024-05-19",
+  "2024-05-20",
+  "2024-05-21",
+  "2024-05-22"
+ ],
+ "sunFile": "sun-may-2024.json",
+ "earthFile": "earth-may-2024.json",
+ "sources": [
+  {
+   "sourceId": "LOLA_LDEM_80S_20MPP_ADJ",
+   "sourceUrl": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_20MPP_ADJ.TIF",
+   "fetchedAt": "2026-11-14T11:43:11.210Z",
+   "isLive": false,
+   "usedFor": "height.bin (13 km window around the site, 20 m/px, box-averaged to 70 m) and near-field horizon",
+   "citation": "Barker et al. 2021, Planetary & Space Science 203, 105119, doi:10.1016/j.pss.2020.105119; NASA GSFC PGDA product 90"
+  },
+  {
+   "sourceId": "LOLA_LDEM_80S_80MPP_ADJ",
+   "sourceUrl": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_80MPP_ADJ.TIF",
+   "fetchedAt": "2026-11-14T11:43:20.536Z",
+   "isLive": false,
+   "usedFor": "surrounding DEM (+-80 km, 80 m/px) so far ridges shadow the site (ray length 85 km)",
+   "citation": "Barker et al. 2021, doi:10.1016/j.pss.2020.105119"
+  },
+  {
+   "sourceId": "LOLA_AVGVISIB_85S_060M_201608",
+   "sourceUrl": "https://pgda.gsfc.nasa.gov/data/MoonIllumination/AVGVISIB_85S_060M_201608.TIF",
+   "fetchedAt": "2026-11-14T11:39:37.443Z",
+   "isLive": false,
+   "usedFor": "illum.bin (average solar illumination, 60 m/px; raw int16 x 4e-5 = fraction)",
+   "citation": "Mazarico et al. 2011, Icarus 211, 1066-1081, doi:10.1016/j.icarus.2010.10.030; NASA GSFC PGDA product 69"
+  },
+  {
+   "sourceId": "LOLA_LPSR_85S_060M_201608",
+   "sourceUrl": "https://pgda.gsfc.nasa.gov/data/MoonIllumination/LPSR_85S_060M_201608.TIF",
+   "fetchedAt": "2026-11-14T11:39:37.443Z",
+   "isLive": false,
+   "usedFor": "psr.bin (official permanent-shadow map, 60 m/px, nearest-neighbour resampled)",
+   "citation": "Mazarico et al. 2011, doi:10.1016/j.icarus.2010.10.030; NASA GSFC PGDA product 69"
+  },
+  {
+   "sourceId": "astronomy-engine-2.1.19",
+   "sourceUrl": "https://www.npmjs.com/package/astronomy-engine/v/2.1.19",
+   "fetchedAt": "2026-11-14T11:52:36.118Z",
+   "isLive": false,
+   "usedFor": "Sun/Earth/Moon positions; Moon orientation from IAU 2015 rotation model (Archinal et al. 2018, doi:10.1007/s10569-017-9805-5)",
+   "citation": "Don Cross, astronomy-engine (MIT)"
+  }
+ ],
+ "method": {
+  "lit": "Hourly-capable ephemeris sampled every 10 min over each UTC day; per cell, horizon elevation profile (1 deg azimuth bins) by ray-marching the DEM out to 85 km (curvature drop d^2/2R included); sunlit if Sun centre elevation > horizon. Sun treated as a POINT at its centre (real disc ~0.53 deg: penumbra ignored, lit% slightly under-estimates edge cells and over-simplifies shadow edges). No refraction/dust. Cell observer height 0 m above the DEM.",
+  "limitations": [
+   "Point Sun",
+   "IAU Moon rotation used instead of exact LOLA ME frame (difference up to ~0.02 deg, ~0.5 km)",
+   "DEM-sampled shadows only; no boulders below ~70 m",
+   "Earth az/el computed from the site centre to the Earth centre"
+  ]
+ },
+ "validation": {
+  "note": "Computed lit% = mean over the 15 May-2024 days (UTC, 10-min steps, point Sun, DEM shadows only). The NASA map is the LOLA average illumination (PGDA product 69, Mazarico et al. 2011: hourly steps over a long lunar nutation cycle, product dated 2016-08), so the two are NOT expected to agree exactly. In May 2024 the sub-solar latitude is about +0.9..+1.2 deg, i.e. the Sun stays slightly below the geometric horizon of the pole, a plausible reason why the 15-day mean is lower than the long-term mean. Treat the numbers as a sanity check, not an accuracy claim.",
+  "allCells": {
+   "cells": 65536,
+   "pearsonR": 0.733,
+   "meanAbsDiffPct": 8.94,
+   "meanComputedPct": 16.38,
+   "meanNasaPct": 21.16
+  },
+  "nonPsrCells": {
+   "cells": 53110,
+   "pearsonR": 0.674,
+   "meanAbsDiffPct": 10.74,
+   "meanComputedPct": 19.83,
+   "meanNasaPct": 25.94
+  },
+  "psrCellsWithZeroLit15d": 0.9375,
+  "nasaIllumZeroButNotPsr": 626,
+  "groups": {
+   "habitatRidge": {
+    "definition": "not PSR, slope <= 8 deg (70 m grid), NASA avg illumination >= 30%",
+    "cells": 5052,
+    "meanLitPctPerDay": [
+     76.19,
+     78.48,
+     78.8,
+     76.07,
+     72.25,
+     62.26,
+     20.53,
+     9.46,
+     9.22,
+     5.57,
+     3.68,
+     4.29,
+     5.79,
+     7.21,
+     7.69
+    ]
+   },
+   "psrCrater": {
+    "definition": "psr.bin == 1 (official LOLA PSR map)",
+    "cells": 12426,
+    "meanLitPctPerDay": [
+     2.21,
+     2.4,
+     2.59,
+     2.57,
+     2.32,
+     1.93,
+     0.46,
+     0.64,
+     0.7,
+     0.45,
+     0.13,
+     0.86,
+     1.98,
+     2.59,
+     2.78
+    ]
+   }
+  },
+  "maxLitPctAnyCellAnyDay": 100,
+  "ephemerisCheck": "IAU 2015 Moon rotation model vs astronomy-engine Libration(): sub-Earth lon agrees to ~0.001 deg, lat to ~0.025 deg (checkephem.mjs)"
+ }
+}

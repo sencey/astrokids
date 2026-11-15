@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-11-14T16:03:49.410Z",
+  "source": "Team artwork (Pati character sheet)",
+  "items": [
+    {
+      "id": "pose-main",
+      "file": "pose-main.webp",
+      "width": 405,
+      "height": 512
+    },
+    {
+      "id": "view-front",
+      "file": "view-front.webp",
+      "width": 235,
+      "height": 359
+    },
+    {
+      "id": "view-side",
+      "file": "view-side.webp",
+      "width": 201,
+      "height": 351
+    },
+    {
+      "id": "view-back",
+      "file": "view-back.webp",
+      "width": 218,
+      "height": 355
+    },
+    {
+      "id": "view-back34",
+      "file": "view-back34.webp",
+      "width": 212,
+      "height": 350
+    },
+    {
+      "id": "expr-happy",
+      "file": "expr-happy.webp",
+      "width": 227,
+      "height": 191
+    },
+    {
+      "id": "expr-wink",
+      "file": "expr-wink.webp",
+      "width": 206,
+      "height": 191
+    },
+    {
+      "id": "expr-surprised",
+      "file": "expr-surprised.webp",
+      "width": 224,
+      "height": 191
+    },
+    {
+      "id": "expr-determined",
+      "file": "expr-determined.webp",
+      "width": 237,
+      "height": 191
+    },
+    {
+      "id": "expr-sad",
+      "file": "expr-sad.webp",
+      "width": 221,
+      "height": 181
+    },
+    {
+      "id": "pose-run",
+      "file": "pose-run.webp",
+      "width": 315,
+      "height": 351
+    },
+    {
+      "id": "pose-jump",
+      "file": "pose-jump.webp",
+      "width": 310,
+      "height": 314
+    },
+    {
+      "id": "pose-sit",
+      "file": "pose-sit.webp",
+      "width": 226,
+      "height": 306
+    },
+    {
+      "id": "pose-wave",
+      "file": "pose-wave.webp",
+      "width": 260,
+      "height": 310
+    },
+    {
+      "id": "pose-live",
+      "file": "pose-live.webp",
+      "width": 335,
+      "height": 480
+    }
+  ]
+}

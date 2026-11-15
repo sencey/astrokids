@@ -1,0 +1,1178 @@
+{
+ "generatedAt": "2026-11-14T11:01:15.739Z",
+ "windowStart": "2026-10-15",
+ "windowEnd": "2026-11-14",
+ "provenance": [
+  {
+   "sourceId": "donki-flr",
+   "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/FLR?startDate=2026-10-15&endDate=2026-11-14",
+   "fetchedAt": "2026-11-14T11:01:07.649Z",
+   "isLive": true
+  },
+  {
+   "sourceId": "donki-cme",
+   "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=2026-10-15&endDate=2026-11-14",
+   "fetchedAt": "2026-11-14T11:01:09.531Z",
+   "isLive": true
+  },
+  {
+   "sourceId": "donki-ips",
+   "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/IPS?startDate=2026-10-15&endDate=2026-11-14",
+   "fetchedAt": "2026-11-14T11:01:10.775Z",
+   "isLive": true
+  },
+  {
+   "sourceId": "donki-sep",
+   "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/SEP?startDate=2026-10-15&endDate=2026-11-14",
+   "fetchedAt": "2026-11-14T11:01:12.838Z",
+   "isLive": true
+  },
+  {
+   "sourceId": "donki-notifications",
+   "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/notifications?startDate=2026-10-15&endDate=2026-11-14&type=all",
+   "fetchedAt": "2026-11-14T11:01:15.728Z",
+   "isLive": true
+  }
+ ],
+ "flares": [
+  {
+   "flrId": "2026-10-16T15:38:00-FLR-001",
+   "peakTime": "2026-10-16T15:42Z",
+   "classType": "M1.3",
+   "sourceLocation": "S16W15",
+   "activeRegionNum": 14551
+  },
+  {
+   "flrId": "2026-10-19T08:54:00-FLR-001",
+   "peakTime": "2026-10-19T09:03Z",
+   "classType": "M1.6",
+   "sourceLocation": "S15W48",
+   "activeRegionNum": 14551
+  },
+  {
+   "flrId": "2026-10-23T03:43:00-FLR-001",
+   "peakTime": "2026-10-23T03:55Z",
+   "classType": "C1.3",
+   "sourceLocation": "N10W89",
+   "activeRegionNum": 14557
+  },
+  {
+   "flrId": "2026-10-26T08:21:00-FLR-001",
+   "peakTime": "2026-10-26T08:38Z",
+   "classType": "C1.9",
+   "sourceLocation": "S10W70",
+   "activeRegionNum": 14561
+  },
+  {
+   "flrId": "2026-10-26T18:17:00-FLR-001",
+   "peakTime": "2026-10-26T18:40Z",
+   "classType": "C2.8",
+   "sourceLocation": "S12W77",
+   "activeRegionNum": 14561
+  },
+  {
+   "flrId": "2026-11-05T18:21:00-FLR-001",
+   "peakTime": "2026-11-05T18:33Z",
+   "classType": "M3.5",
+   "sourceLocation": "S08E35",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-07T12:26:00-FLR-001",
+   "peakTime": "2026-11-07T12:43Z",
+   "classType": "M1.2",
+   "sourceLocation": "S08E13",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-07T17:11:00-FLR-001",
+   "peakTime": "2026-11-07T17:17Z",
+   "classType": "M1.4",
+   "sourceLocation": "S08E10",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-07T18:21:00-FLR-001",
+   "peakTime": "2026-11-07T18:42Z",
+   "classType": "M1.9",
+   "sourceLocation": "S07E06",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-08T07:33:00-FLR-001",
+   "peakTime": "2026-11-08T07:46Z",
+   "classType": "M1.7",
+   "sourceLocation": "S07W03",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-08T15:29:00-FLR-001",
+   "peakTime": "2026-11-08T15:37Z",
+   "classType": "M1.1",
+   "sourceLocation": "S07W01",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-08T18:15:00-FLR-001",
+   "peakTime": "2026-11-08T18:27Z",
+   "classType": "M1.1",
+   "sourceLocation": "S07W04",
+   "activeRegionNum": 14566
+  },
+  {
+   "flrId": "2026-11-11T21:06:00-FLR-001",
+   "peakTime": "2026-11-11T21:21Z",
+   "classType": "M1.7",
+   "sourceLocation": "S07W46",
+   "activeRegionNum": 14566
+  }
+ ],
+ "cmes": [
+  {
+   "activityId": "2026-10-15T20:24:00-CME-001",
+   "startTime": "2026-10-15T20:24Z",
+   "speedKms": 428,
+   "halfAngle": 36,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T06:09:00-CME-001",
+   "startTime": "2026-10-16T06:09Z",
+   "speedKms": 324,
+   "halfAngle": 45,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T07:12:00-CME-001",
+   "startTime": "2026-10-16T07:12Z",
+   "speedKms": 490,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T08:12:00-CME-001",
+   "startTime": "2026-10-16T08:12Z",
+   "speedKms": 334,
+   "halfAngle": 14,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T11:48:00-CME-001",
+   "startTime": "2026-10-16T11:48Z",
+   "speedKms": 475,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T12:38:00-CME-001",
+   "startTime": "2026-10-16T12:38Z",
+   "speedKms": 247,
+   "halfAngle": 29,
+   "enlil": {
+    "estShockArrivalEarth": "2026-10-20T18:00Z",
+    "kp90": 3,
+    "kp180": 4,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-16T15:12:00-CME-001",
+   "startTime": "2026-10-16T15:12Z",
+   "speedKms": 270,
+   "halfAngle": 30,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-16T17:00:00-CME-001",
+   "startTime": "2026-10-16T17:00Z",
+   "speedKms": 479,
+   "halfAngle": 16,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-16T20:24:00-CME-001",
+   "startTime": "2026-10-16T20:24Z",
+   "speedKms": 552,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-17T02:48:00-CME-001",
+   "startTime": "2026-10-17T02:48Z",
+   "speedKms": 1048,
+   "halfAngle": 38,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-17T17:00:00-CME-001",
+   "startTime": "2026-10-17T17:00Z",
+   "speedKms": 453,
+   "halfAngle": 24,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-17T18:12:00-CME-001",
+   "startTime": "2026-10-17T18:12Z",
+   "speedKms": 427,
+   "halfAngle": 21,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-18T21:30:00-CME-001",
+   "startTime": "2026-10-18T21:30Z",
+   "speedKms": 375,
+   "halfAngle": 10,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-18T23:15:00-CME-001",
+   "startTime": "2026-10-18T23:15Z",
+   "speedKms": 590,
+   "halfAngle": 20,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-19T14:48:00-CME-001",
+   "startTime": "2026-10-19T14:48Z",
+   "speedKms": 387,
+   "halfAngle": 27,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-19T19:15:00-CME-001",
+   "startTime": "2026-10-19T19:15Z",
+   "speedKms": 474,
+   "halfAngle": 14,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-20T01:26:00-CME-001",
+   "startTime": "2026-10-20T01:26Z",
+   "speedKms": 368,
+   "halfAngle": 28,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-20T07:24:00-CME-001",
+   "startTime": "2026-10-20T07:24Z",
+   "speedKms": 748,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-20T09:09:00-CME-001",
+   "startTime": "2026-10-20T09:09Z",
+   "speedKms": 568,
+   "halfAngle": 38,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-20T14:23:00-CME-001",
+   "startTime": "2026-10-20T14:23Z",
+   "speedKms": 920,
+   "halfAngle": 13,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-21T08:53:00-CME-001",
+   "startTime": "2026-10-21T08:53Z",
+   "speedKms": 310,
+   "halfAngle": 35,
+   "enlil": {
+    "estShockArrivalEarth": "2026-10-25T06:00Z",
+    "kp90": 3,
+    "kp180": 4,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-21T13:38:00-CME-001",
+   "startTime": "2026-10-21T13:38Z",
+   "speedKms": 547,
+   "halfAngle": 26,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-21T20:36:00-CME-001",
+   "startTime": "2026-10-21T20:36Z",
+   "speedKms": 973,
+   "halfAngle": 46,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-22T20:12:00-CME-001",
+   "startTime": "2026-10-22T20:12Z",
+   "speedKms": 561,
+   "halfAngle": 13,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-22T22:12:00-CME-001",
+   "startTime": "2026-10-22T22:12Z",
+   "speedKms": 381,
+   "halfAngle": 32,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-23T04:18:00-CME-001",
+   "startTime": "2026-10-23T04:18Z",
+   "speedKms": 597,
+   "halfAngle": 26,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-10-27T12:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-23T10:24:00-CME-001",
+   "startTime": "2026-10-23T10:24Z",
+   "speedKms": 337,
+   "halfAngle": 17,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-23T16:36:00-CME-001",
+   "startTime": "2026-10-23T16:36Z",
+   "speedKms": 255,
+   "halfAngle": 15,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-24T15:12:00-CME-001",
+   "startTime": "2026-10-24T15:12Z",
+   "speedKms": 652,
+   "halfAngle": 14,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-24T18:00:00-CME-001",
+   "startTime": "2026-10-24T18:00Z",
+   "speedKms": 251,
+   "halfAngle": 12,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-24T18:08:00-CME-001",
+   "startTime": "2026-10-24T18:08Z",
+   "speedKms": 566,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-24T20:36:00-CME-001",
+   "startTime": "2026-10-24T20:36Z",
+   "speedKms": 838,
+   "halfAngle": 10,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-24T21:48:00-CME-001",
+   "startTime": "2026-10-24T21:48Z",
+   "speedKms": 333,
+   "halfAngle": 19,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-24T22:24:00-CME-001",
+   "startTime": "2026-10-24T22:24Z",
+   "speedKms": 621,
+   "halfAngle": 17,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-25T03:12:00-CME-001",
+   "startTime": "2026-10-25T03:12Z",
+   "speedKms": 336,
+   "halfAngle": 41,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-25T05:00:00-CME-001",
+   "startTime": "2026-10-25T05:00Z",
+   "speedKms": 246,
+   "halfAngle": 30,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-25T09:48:00-CME-001",
+   "startTime": "2026-10-25T09:48Z",
+   "speedKms": 360,
+   "halfAngle": 24,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-25T19:24:00-CME-001",
+   "startTime": "2026-10-25T19:24Z",
+   "speedKms": 275,
+   "halfAngle": 27,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-11-01T01:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T00:12:00-CME-001",
+   "startTime": "2026-10-26T00:12Z",
+   "speedKms": 402,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-26T01:26:00-CME-001",
+   "startTime": "2026-10-26T01:26Z",
+   "speedKms": 285,
+   "halfAngle": 10,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-11-01T02:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T02:12:00-CME-001",
+   "startTime": "2026-10-26T02:12Z",
+   "speedKms": 327,
+   "halfAngle": 20,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-11-01T02:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T09:00:00-CME-001",
+   "startTime": "2026-10-26T09:00Z",
+   "speedKms": 873,
+   "halfAngle": 11,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-10-30T18:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T09:48:00-CME-001",
+   "startTime": "2026-10-26T09:48Z",
+   "speedKms": 681,
+   "halfAngle": 24,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-10-30T18:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T18:48:00-CME-001",
+   "startTime": "2026-10-26T18:48Z",
+   "speedKms": 616,
+   "halfAngle": 27,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-10-31T11:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-26T20:48:00-CME-001",
+   "startTime": "2026-10-26T20:48Z",
+   "speedKms": 479,
+   "halfAngle": 35,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-27T06:48:00-CME-001",
+   "startTime": "2026-10-27T06:48Z",
+   "speedKms": 260,
+   "halfAngle": 15,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-27T12:53:00-CME-001",
+   "startTime": "2026-10-27T12:53Z",
+   "speedKms": 302,
+   "halfAngle": 17,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-28T00:00:00-CME-001",
+   "startTime": "2026-10-28T00:00Z",
+   "speedKms": 399,
+   "halfAngle": 15,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-28T11:12:00-CME-001",
+   "startTime": "2026-10-28T11:12Z",
+   "speedKms": 329,
+   "halfAngle": 10,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-10-29T10:36:00-CME-001",
+   "startTime": "2026-10-29T10:36Z",
+   "speedKms": 287,
+   "halfAngle": 30,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-11-04T08:00Z"
+   }
+  },
+  {
+   "activityId": "2026-10-30T12:36:00-CME-001",
+   "startTime": "2026-10-30T12:36Z",
+   "speedKms": 218,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-10-31T05:00:00-CME-001",
+   "startTime": "2026-10-31T05:00Z",
+   "speedKms": 345,
+   "halfAngle": 24,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-01T00:00:00-CME-001",
+   "startTime": "2026-11-01T00:00Z",
+   "speedKms": 894,
+   "halfAngle": 14,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-01T19:00:00-CME-001",
+   "startTime": "2026-11-01T19:00Z",
+   "speedKms": 357,
+   "halfAngle": 27,
+   "enlil": {
+    "estShockArrivalEarth": "2026-11-05T05:00Z",
+    "kp90": 3,
+    "kp180": 4,
+    "mars": "2026-11-07T06:00Z"
+   }
+  },
+  {
+   "activityId": "2026-11-01T19:48:00-CME-001",
+   "startTime": "2026-11-01T19:48Z",
+   "speedKms": 309,
+   "halfAngle": 30,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-03T09:36:00-CME-001",
+   "startTime": "2026-11-03T09:36Z",
+   "speedKms": 347,
+   "halfAngle": 41,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-04T02:48:00-CME-001",
+   "startTime": "2026-11-04T02:48Z",
+   "speedKms": 497,
+   "halfAngle": 14,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-05T04:24:00-CME-001",
+   "startTime": "2026-11-05T04:24Z",
+   "speedKms": 330,
+   "halfAngle": 19,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-05T11:48:00-CME-001",
+   "startTime": "2026-11-05T11:48Z",
+   "speedKms": 404,
+   "halfAngle": 16,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-05T20:00:00-CME-001",
+   "startTime": "2026-11-05T20:00Z",
+   "speedKms": 915,
+   "halfAngle": 13,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-05T21:24:00-CME-001",
+   "startTime": "2026-11-05T21:24Z",
+   "speedKms": 406,
+   "halfAngle": 16,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-06T01:26:00-CME-001",
+   "startTime": "2026-11-06T01:26Z",
+   "speedKms": 264,
+   "halfAngle": 14,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-06T10:53:00-CME-001",
+   "startTime": "2026-11-06T10:53Z",
+   "speedKms": 368,
+   "halfAngle": 18,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-06T13:15:00-CME-001",
+   "startTime": "2026-11-06T13:15Z",
+   "speedKms": 530,
+   "halfAngle": 20,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-06T16:15:00-CME-001",
+   "startTime": "2026-11-06T16:15Z",
+   "speedKms": 476,
+   "halfAngle": 43,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-06T20:24:00-CME-001",
+   "startTime": "2026-11-06T20:24Z",
+   "speedKms": 319,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-07T06:24:00-CME-001",
+   "startTime": "2026-11-07T06:24Z",
+   "speedKms": 245,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-07T09:36:00-CME-001",
+   "startTime": "2026-11-07T09:36Z",
+   "speedKms": 507,
+   "halfAngle": 26,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-07T10:24:00-CME-001",
+   "startTime": "2026-11-07T10:24Z",
+   "speedKms": 330,
+   "halfAngle": 39,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-07T18:30:00-CME-001",
+   "startTime": "2026-11-07T18:30Z",
+   "speedKms": 423,
+   "halfAngle": 13,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-08T00:48:00-CME-001",
+   "startTime": "2026-11-08T00:48Z",
+   "speedKms": 591,
+   "halfAngle": 22,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-08T08:48:00-CME-001",
+   "startTime": "2026-11-08T08:48Z",
+   "speedKms": 367,
+   "halfAngle": 27,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-09T09:12:00-CME-001",
+   "startTime": "2026-11-09T09:12Z",
+   "speedKms": 338,
+   "halfAngle": 11,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-09T10:53:00-CME-001",
+   "startTime": "2026-11-09T10:53Z",
+   "speedKms": 299,
+   "halfAngle": 35,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-09T18:15:00-CME-001",
+   "startTime": "2026-11-09T18:15Z",
+   "speedKms": 726,
+   "halfAngle": 10,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": "2026-11-13T12:00Z"
+   }
+  },
+  {
+   "activityId": "2026-11-10T02:00:00-CME-001",
+   "startTime": "2026-11-10T02:00Z",
+   "speedKms": 803,
+   "halfAngle": 10,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-10T02:12:00-CME-001",
+   "startTime": "2026-11-10T02:12Z",
+   "speedKms": 346,
+   "halfAngle": 34,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-10T05:30:00-CME-001",
+   "startTime": "2026-11-10T05:30Z",
+   "speedKms": 974,
+   "halfAngle": 11,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-11T23:24:00-CME-001",
+   "startTime": "2026-11-11T23:24Z",
+   "speedKms": 367,
+   "halfAngle": 29,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-12T01:53:00-CME-001",
+   "startTime": "2026-11-12T01:53Z",
+   "speedKms": 327,
+   "halfAngle": 15,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-12T21:12:00-CME-001",
+   "startTime": "2026-11-12T21:12Z",
+   "speedKms": 247,
+   "halfAngle": 32,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-13T01:26:00-CME-001",
+   "startTime": "2026-11-13T01:26Z",
+   "speedKms": 308,
+   "halfAngle": 38,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-13T03:24:00-CME-001",
+   "startTime": "2026-11-13T03:24Z",
+   "speedKms": 525,
+   "halfAngle": 17,
+   "enlil": {
+    "estShockArrivalEarth": null,
+    "kp90": null,
+    "kp180": null,
+    "mars": null
+   }
+  },
+  {
+   "activityId": "2026-11-13T09:24:00-CME-001",
+   "startTime": "2026-11-13T09:24Z",
+   "speedKms": 302,
+   "halfAngle": 24,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-13T16:24:00-CME-001",
+   "startTime": "2026-11-13T16:24Z",
+   "speedKms": null,
+   "halfAngle": null,
+   "enlil": null
+  },
+  {
+   "activityId": "2026-11-13T21:24:00-CME-001",
+   "startTime": "2026-11-13T21:24Z",
+   "speedKms": 474,
+   "halfAngle": 12,
+   "enlil": null
+  }
+ ],
+ "shocks": [
+  {
+   "eventTime": "2026-10-20T11:23Z",
+   "location": "Earth",
+   "activityId": "2026-10-20T11:23:00-IPS-001"
+  },
+  {
+   "eventTime": "2026-10-25T12:20Z",
+   "location": "Earth",
+   "activityId": "2026-10-25T12:20:00-IPS-001"
+  }
+ ],
+ "sep": [],
+ "notifications": [
+  {
+   "messageId": "20261016-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-10-16T13:28Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-10-16T13:20Z. NASA spacecraft at GEO, MEO and other orbits passing through or in the vicinity of the Earth's outer radiation belt can be impacted. Activity ID: 2026-10-16T13:20:00-RBE-001.",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49130/1"
+  },
+  {
+   "messageId": "20261016-AL-002",
+   "messageType": "RBE",
+   "issueTime": "2026-10-16T13:43Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-10-16T13:20Z. The elevated energetic electron flux levels are caused by the arrival of the coronal hole high speed stream starting on 2026-10-10, reaching maximum sustained speeds of approximately 850 km/s. The solar wind speed ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49131/1"
+  },
+  {
+   "messageId": "20261017-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-10-17T13:12Z",
+   "summary": "O-type CME detected by STEREO A / GOES / SOHO. Start time of the event: 2026-10-17T02:48Z. Estimated speed: ~1048 km/s. Estimated opening half-angle: 38 deg. Direction (lon./lat.): -99/-4 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-10-17T02:48:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49153/1"
+  },
+  {
+   "messageId": "20261021-7D-001",
+   "messageType": "Report",
+   "issueTime": "2026-10-21T20:09Z",
+   "summary": "## Community Coordinated Modeling Center Database Of Notifications, Knowledge, Information (CCMC DONKI) ## Message Type: Weekly Space Weather Summary Report for October 14, 2026 - October 20, 2026 ## ## Message Issue Date: 2026-10-21T20:09:11Z ## Report Coverage Begin Date: 2026-10-14T00:00Z ## Report Coverage End Date: 2026-10-20T23:59Z ## Message ID: 20261021-7D-001 ## ## Disclaimer: NOAA's Spac",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49196/1"
+  },
+  {
+   "messageId": "20261021-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-10-21T23:44Z",
+   "summary": "C-type CME detected by STEREO A / GOES / SOHO. Start time of the event: 2026-10-21T20:36Z. Estimated speed: ~841 km/s. Estimated opening half-angle: 38 deg. Direction (lon./lat.): -169/28 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-10-21T20:36:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49203/1"
+  },
+  {
+   "messageId": "20261022-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-10-22T20:28Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-10-22T20:20Z. NASA spacecraft at GEO, MEO and other orbits passing through or in the vicinity of the Earth's outer radiation belt can be impacted. Activity ID: 2026-10-22T20:20:00-RBE-001.",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49206/1"
+  },
+  {
+   "messageId": "20261022-AL-002",
+   "messageType": "RBE",
+   "issueTime": "2026-10-22T20:40Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-10-22T20:20Z. The elevated energetic electron flux levels are likely caused by the combined arrival of the CME with ID 2026-10-16T12:38:00-CME-001, and the arrival of a coronal hole high speed stream starting on 2026-10-21 reach",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49207/1"
+  },
+  {
+   "messageId": "20261023-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-10-23T12:51Z",
+   "summary": "C-type CME detected by STEREO A / GOES / SOHO. Start time of the event: 2026-10-23T04:18Z. Estimated speed: ~597 km/s. Estimated opening half-angle: 26 deg. Direction (lon./lat.): 71/36 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-10-23T04:18:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA C",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49217/1"
+  },
+  {
+   "messageId": "20261024-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-10-24T20:46Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-10-24T12:00Z. The elevated energetic electron flux levels observed since 2026-10-22T20:20Z are likely caused by the arrival of the CME with ID 2026-10-16T12:38:00-CME-001, and the arrival of a ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49225/1"
+  },
+  {
+   "messageId": "20261026-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-10-26T13:50Z",
+   "summary": "C-type CME detected by STEREO A / GOES / SOHO. Start time of the event: 2026-10-26T09:48Z. Estimated speed: ~681 km/s. Estimated opening half-angle: 24 deg. Direction (lon./lat.): 48/-8 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-10-26T09:48:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA C",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49253/1"
+  },
+  {
+   "messageId": "20261026-AL-002",
+   "messageType": "CME",
+   "issueTime": "2026-10-26T17:15Z",
+   "summary": "Update on CME with ID 2026-10-26T09:48:00-CME-001 (see previous notification 20261026-AL-001), now simulated with CME with ID 2026-10-26T09:00:00-CME-001. Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it is estimated that the CMEs may impact Solar Orbiter, STEREO A, Mars (minor im",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49264/1"
+  },
+  {
+   "messageId": "20261026-AL-003",
+   "messageType": "RBE",
+   "issueTime": "2026-10-26T20:37Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux first crossed the threshold of 1000 pfu starting at 2026-10-22T20:20Z. The most recent crossing of the 1000 pfu threshold was at 2026-10-26T19:40Z and the fluxes are currently elevated but below the threshold. The elevated energetic electron flux levels observed ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49275/1"
+  },
+  {
+   "messageId": "20261027-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-10-27T00:17Z",
+   "summary": "C-type CME detected by GOES / SOHO. Start time of the event: 2026-10-26T18:48Z. Estimated speed: ~616 km/s. Estimated opening half-angle: 27 deg. Direction (lon./lat.): 77/-15 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-10-26T18:48:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community C",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49281/1"
+  },
+  {
+   "messageId": "20261028-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-10-28T15:15Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-10-28T09:15Z. The elevated energetic electron flux levels observed since 2026-10-27T11:30Z are caused by the arrival of a coronal hole high speed stream starting on 2026-10-26, reaching maximum",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49300/1"
+  },
+  {
+   "messageId": "20261028-7D-001",
+   "messageType": "Report",
+   "issueTime": "2026-10-28T20:01Z",
+   "summary": "Solar activity was at low levels during this reporting period with 11 C-type CMEs (see details below). Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it was estimated that the following CMEs were predicted to impact the listed locations: CME Starting time | Predicted Impacts (plus ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49307/1"
+  },
+  {
+   "messageId": "20261030-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-10-30T15:15Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-10-30T13:10Z. The elevated energetic electron flux levels observed since 2026-10-27T11:30Z are caused by the arrival of a coronal hole high speed stream starting on 2026-10-26, reaching maximum",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49329/1"
+  },
+  {
+   "messageId": "20261031-AL-001",
+   "messageType": "GST",
+   "issueTime": "2026-10-31T21:04Z",
+   "summary": "Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6 (moderate) during the synoptic period 2026-10-31T18:00Z to 2026-10-31T21:00Z. NASA spacecraft at GEO, MEO, polar and other orbits passing through or in the vicinity of the Earth's ring current and auroral regions can be impacted. Activity ID: 2026-10-31T18:00:00-GST-001.",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49349/1"
+  },
+  {
+   "messageId": "20261031-AL-002",
+   "messageType": "GST",
+   "issueTime": "2026-10-31T21:11Z",
+   "summary": "Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6 (moderate) during the synoptic period 2026-10-31T18:00Z to 2026-10-31T21:00Z. The storm is caused by the coronal hole high speed stream starting on 2026-10-31. NASA spacecraft at GEO, MEO, polar and other orbits passing through or in the vicinity of the Earth's ring current and auroral regions can be",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49350/1"
+  },
+  {
+   "messageId": "20261101-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-11-01T13:28Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-11-01T12:45Z. The elevated energetic electron flux levels are caused by the arrival of a coronal hole high speed stream which started on 2026-10-31, reaching a maximum speed of approximately 600 km/s. The solar wind speed observ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49352/1"
+  },
+  {
+   "messageId": "20261101-AL-002",
+   "messageType": "CME",
+   "issueTime": "2026-11-01T16:06Z",
+   "summary": "C-type CME detected by STEREO A / GOES / SOHO. Start time of the event: 2026-11-01T00:00Z. Estimated speed: ~894 km/s. Estimated opening half-angle: 14 deg. Direction (lon./lat.): -42/-11 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-11-01T00:00:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49356/1"
+  },
+  {
+   "messageId": "20261103-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-11-03T13:28Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-11-03T05:25Z. The elevated energetic electron flux levels observed since 2026-11-01T12:45Z are likely caused by a coronal hole high speed stream which arrived on 2026-10-31, reaching a maximum ",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49369/1"
+  },
+  {
+   "messageId": "20261104-7D-001",
+   "messageType": "Report",
+   "issueTime": "2026-11-04T21:04Z",
+   "summary": "Solar activity was at low levels during this reporting period with one C-type CME (see details below). Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it was estimated that the following CME was predicted to impact the listed locations: CME Starting time | Predicted Impacts (plus mi",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49385/1"
+  },
+  {
+   "messageId": "20261105-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-11-05T13:29Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-11-05T13:00Z. The elevated energetic electron flux levels observed since 2026-11-01T12:45Z are likely caused by a coronal hole high speed stream which arrived on 2026-10-31, reaching maximum sp",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49388/1"
+  },
+  {
+   "messageId": "20261106-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-11-06T01:56Z",
+   "summary": "C-type CME detected by GOES / SOHO. Start time of the event: 2026-11-05T20:00Z. Estimated speed: ~798 km/s. Estimated opening half-angle: 13 deg. Direction (lon./lat.): -35/2 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-11-05T20:00:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Co",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49397/1"
+  },
+  {
+   "messageId": "20261108-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-11-08T21:18Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-11-08T21:10Z. NASA spacecraft at GEO, MEO and other orbits passing through or in the vicinity of the Earth's outer radiation belt can be impacted. Activity ID: 2026-11-08T21:10:00-RBE-001.",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49463/1"
+  },
+  {
+   "messageId": "20261108-AL-002",
+   "messageType": "RBE",
+   "issueTime": "2026-11-08T21:28Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux is above 1000 pfu starting at 2026-11-08T21:10Z. The elevated energetic electron flux levels are caused by coronal hole high speed stream starting at 2026-11-06, reaching maximum sustained speeds of approximately 780 km/s. The solar wind speed observed at L1 is c",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49464/1"
+  },
+  {
+   "messageId": "20261110-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-11-10T13:06Z",
+   "summary": "C-type CME detected by GOES. Start time of the event: 2026-11-09T18:15Z. Estimated speed: ~726 km/s. Estimated opening half-angle: 10 deg. Direction (lon./lat.): 65/-2 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-11-09T18:15:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinat",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49474/1"
+  },
+  {
+   "messageId": "20261110-AL-002",
+   "messageType": "CME",
+   "issueTime": "2026-11-10T16:29Z",
+   "summary": "C-type CME detected by GOES / STEREO A / SOHO. Start time of the event: 2026-11-10T05:30Z. Estimated speed: ~974 km/s. Estimated opening half-angle: 11 deg. Direction (lon./lat.): 93/2 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-11-10T05:30:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Co",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49483/1"
+  },
+  {
+   "messageId": "20261110-AL-003",
+   "messageType": "RBE",
+   "issueTime": "2026-11-10T21:31Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-11-10T06:10Z. The elevated energetic electron flux levels observed since 2026-11-08T21:10Z are caused by a coronal hole high speed stream starting on 2026-11-06, reaching maximum sustained spee",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49486/1"
+  },
+  {
+   "messageId": "20261111-7D-001",
+   "messageType": "Report",
+   "issueTime": "2026-11-11T21:02Z",
+   "summary": "Solar activity was at moderate level during this reporting period, with 7 M-class flares and 7 C-type CMEs (see details below). Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it was estimated that the following CMEs were predicted to impact the listed locations: CME Starting time |",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49503/1"
+  },
+  {
+   "messageId": "20261112-AL-001",
+   "messageType": "RBE",
+   "issueTime": "2026-11-12T21:30Z",
+   "summary": "Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES \"greater than 2.0 MeV\" integral electron flux remains elevated, recently crossing the threshold of 1000 pfu at 2026-11-12T07:35Z. The elevated energetic electron flux levels observed since 2026-11-08T21:10Z are caused by a coronal hole high speed stream starting on 2026-11-06, reaching maximum sustained spee",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49522/1"
+  },
+  {
+   "messageId": "20261113-AL-001",
+   "messageType": "CME",
+   "issueTime": "2026-11-13T16:25Z",
+   "summary": "C-type CME detected by STEREO A / SOHO. Start time of the event: 2026-11-13T03:24Z. Estimated speed: ~525 km/s. Estimated opening half-angle: 17 deg. Direction (lon./lat.): -46/13 in Heliocentric Earth Equatorial coordinates. Activity ID: 2026-11-13T03:24:00-CME-001 Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Communi",
+   "url": "https://ccmc.gsfc.nasa.gov/DONKI/view/Alert/49532/1"
+  }
+ ]
+}
