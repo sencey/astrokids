@@ -2,6 +2,8 @@
 
 NASA Space Apps Challenge 2026 — *Build a Junior Astronaut Mission Trainer*.
 
+**Play it:** https://sencey.github.io/astrokids/ (phone or desktop browser, no install)
+
 A browser game for kids aged 7–12: the player commands a base at the Moon's south pole, on NASA's real LOLA terrain of the Connecting Ridge (Shackleton – de Gerlache), and splits a limited power budget between life support, ice mining, a greenhouse, a regolith radiation shield and science. The mission replays the real 8–22 May 2024 superstorm week; a second mode, "Today's Moon", uses today's Sun position and the latest NASA DONKI space weather. Pati, a dog in a spacesuit, is the commander's advisor.
 
 ## Run
