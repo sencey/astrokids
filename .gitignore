@@ -23,3 +23,4 @@ Thumbs.db
 
 # GitHub Actions need the 'workflow' token scope to push; add later with: gh auth refresh -s workflow
 .github/workflows/
+/Game.tsx
