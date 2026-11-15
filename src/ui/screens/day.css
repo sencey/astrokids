@@ -1,0 +1,136 @@
+.dayscreen {
+  padding-top: 8px;
+}
+.hud__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.hud__date {
+  font-size: 0.85rem;
+  font-weight: 800;
+  opacity: 0.85;
+}
+.confirm {
+  min-width: var(--tap-lg);
+  min-height: var(--tap-lg);
+  padding: 0 18px;
+  animation: pawNudge 2.6s ease-in-out infinite;
+}
+@keyframes pawNudge {
+  50% {
+    transform: scale(1.06);
+  }
+}
+.overlay--tap {
+  background: transparent;
+  z-index: 25;
+  cursor: pointer;
+}
+.overlay--clear {
+  background: transparent;
+  pointer-events: none;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+.overlay--guess {
+  background: rgba(7, 11, 31, 0.72);
+}
+.guess,
+.sky-card {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: min(92%, 560px);
+  width: 100%;
+}
+.guess h2 {
+  margin: 0;
+}
+.guess__time {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.guess__range {
+  width: 100%;
+  height: var(--tap);
+  accent-color: var(--accent);
+}
+.guess__range::-webkit-slider-thumb {
+  width: 44px;
+  height: 44px;
+}
+.rocket {
+  animation: launch 2.4s ease-in forwards;
+}
+@keyframes launch {
+  to {
+    transform: translateY(-340px);
+    opacity: 0;
+  }
+}
+/* Notebook */
+.notebook {
+  background: rgba(7, 11, 31, 0.8);
+  z-index: 45;
+  padding: 10px;
+  justify-content: flex-start;
+}
+.notebook__page {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: var(--radius);
+  width: min(100%, 760px);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 16px 22px 24px;
+  user-select: text;
+}
+.notebook__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notebook h2,
+.notebook h3 {
+  margin: 8px 0 4px;
+}
+.notebook h3 {
+  font-size: 1rem;
+}
+.notebook__list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.92rem;
+}
+.notebook__list--cols {
+  columns: 2;
+}
+.notebook__src {
+  font-size: 0.72rem;
+  word-break: break-all;
+}
+.notebook__later {
+  font-style: italic;
+}
+.clock {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+@media (max-width: 560px) {
+  .hud__center {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .stage__hud {
+    flex-wrap: wrap;
+  }
+}

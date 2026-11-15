@@ -1,0 +1,1 @@
+{"name":"astrakids-art","private":true,"version":"1.0.0","type":"module","scripts":{"build":"node build-pati.mjs"},"dependencies":{"sharp":"0.33.5"}}

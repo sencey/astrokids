@@ -1,0 +1,153 @@
+/* HUD: chest panel (top-centre), Pati + speech, gear buttons, camera cluster, placement bar. Tokens live in src/styles/suit.css. */
+.m3d-boot { display: grid; place-items: center; font-size: var(--fs-3); }
+
+.m3d-hud { position: absolute; inset: 0; pointer-events: none; }
+.m3d-hud > * { pointer-events: none; }
+.m3d-hud button, .m3d-hud input, .m3d-hud .m3d-time, .m3d-hud .m3d-dock, .m3d-hud .ck { pointer-events: auto; }
+
+/* ---- top row: Pati + speech, chest panel, language ---- */
+.m3d-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 72px; /* the language pill stands in the right gutter on portrait phones */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 10px;
+  align-items: start;
+}
+.m3d-left { display: contents; }
+.m3d-top .m3d-pati { grid-column: 1; grid-row: 1; }
+.m3d-gauges { grid-column: 2; grid-row: 1; justify-self: center; min-width: 0; }
+.m3d-bubble {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: start;
+  max-width: min(calc(100% - 52px), 38ch); /* leaves the two-column gear block clear on portrait */
+  padding: 10px 14px;
+  background: var(--suit-white);
+  color: var(--cobalt);
+  border: 2px solid var(--cobalt);
+  border-radius: var(--r-bubble);
+  font-size: var(--fs-2);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.m3d-bubble > p { margin: 0; }
+.m3d-lang { display: flex; border-radius: 999px; overflow: hidden; border: 2px solid var(--cobalt); background: var(--suit-white); pointer-events: auto; }
+.m3d-lang button { min-width: 48px; min-height: 44px; padding: 0 10px; background: none; border: 0; font-weight: 700; font-size: var(--fs-1); color: var(--cobalt); }
+.m3d-lang button.on { background: var(--cobalt); color: var(--suit-white); }
+.m3d-top .m3d-lang { position: absolute; top: 0; right: -60px; flex-direction: column; }
+.m3d-top .m3d-lang button { min-width: 44px; min-height: 46px; padding: 0; }
+.m3d-warn { position: absolute; top: 4px; left: 50%; transform: translateX(-50%); background: var(--sun); color: var(--cobalt); font-size: var(--fs-1); font-weight: 700; padding: 2px 10px; border-radius: var(--r-chip); white-space: nowrap; }
+
+/* ---- Pati avatar ---- */
+.m3d-pati { width: 56px; height: 56px; border-radius: 50%; border: 3px solid var(--suit-white); background: var(--cobalt); font-size: 50px; padding: 0; display: grid; place-items: center; pointer-events: auto; }
+.m3d-pati.big { width: 110px; height: 110px; font-size: 100px; }
+.m3d-pati.pati-av { position: relative; font-size: 0; overflow: visible; }
+.m3d-pati.pati-av.big { width: 120px; height: 120px; }
+.pati-av-bob { position: absolute; inset: 0; display: block; border-radius: 50%; overflow: hidden; animation: patibob 3.2s ease-in-out infinite; }
+.pati-av-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 60%; transform: scale(1.12); }
+.pati-av-img.in { animation: patifadein .35s ease-out both; }
+.pati-av-img.out { animation: patifadeout .35s ease-out both; }
+@keyframes patibob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes patifadein { from { opacity: 0; } to { opacity: 1; } }
+@keyframes patifadeout { from { opacity: 1; } to { opacity: 0; } }
+.m3d[data-reduce='true'] .pati-av-img.out { display: none; }
+@media (prefers-reduced-motion: reduce) { .pati-av-img.out { display: none; } }
+
+/* ---- gear buttons + camera cluster (portrait: two columns under the language pill, ends well above the half sheet) ---- */
+.m3d-tools { position: absolute; right: 12px; top: 116px; display: grid; grid-template-columns: repeat(2, var(--tap)); gap: 6px; }
+.m3d-tools .rb { pointer-events: auto; }
+.cc-pop { position: absolute; right: calc(100% + 8px); bottom: 0; display: grid; grid-template-columns: repeat(4, var(--tap)); gap: 6px; padding: 8px; background: var(--suit-white); border: 2px solid var(--cobalt); border-radius: var(--r-panel); pointer-events: auto; }
+.m3d-chiplabel { position: absolute; left: 12px; bottom: calc(50vh + 10px); background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); border-radius: 999px; padding: 4px 14px; font-size: var(--fs-1); font-weight: 700; }
+
+/* ---- placement bar: time controls + dock ---- */
+.m3d-bar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0 8px 8px; flex-wrap: nowrap; }
+.m3d-time { display: flex; align-items: center; gap: 8px; padding: 4px 8px; border-radius: 40px; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); }
+.m3d-clock { font-size: var(--fs-1); font-weight: 700; min-width: 80px; text-align: center; }
+.m3d-time input[type=range] { width: clamp(70px, 9vw, 130px); height: 24px; accent-color: var(--orange); }
+.m3d-dock { display: flex; gap: 8px; align-items: center; padding: 4px 8px; border-radius: 32px; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); }
+.m3d-build { position: relative; width: 56px; height: 56px; border-radius: var(--r-tile); border: 2px solid var(--cobalt); background: var(--suit-white); color: var(--cobalt); display: grid; place-items: center; font-size: 36px; flex: 0 0 auto; padding: 0; }
+.m3d-build.on { background: var(--orange); }
+.m3d-build:disabled { opacity: 0.5; }
+.m3d-count { position: absolute; right: -4px; bottom: -4px; font-style: normal; font-size: var(--fs-1); font-weight: 700; background: var(--cobalt); color: var(--suit-white); border-radius: 999px; min-width: 22px; padding: 0 6px; line-height: 22px; text-align: center; }
+
+/* ---- placement tag shown over a hovered slot ---- */
+.m3d-tag { background: var(--suit-white); color: var(--cobalt); border: 3px solid var(--cobalt); border-radius: var(--r-tile); padding: 6px 10px; min-width: 96px; text-align: center; font-size: var(--fs-1); transform: translateY(-100%); }
+.m3d-tag.bad { border-style: dashed; border-color: var(--orange); }
+.m3d-tag-b { font-size: 34px; margin: 0 auto; }
+.m3d-tag-row { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 22px; }
+.m3d-tag-row b { font-size: var(--fs-3); }
+.m3d-tag-row small { font-size: var(--fs-1); font-weight: 600; }
+.m3d-tag-bar { height: 8px; background: var(--suit-shade); border-radius: 4px; overflow: hidden; margin: 3px 0; }
+.m3d-tag-bar i { display: block; height: 100%; background: var(--cobalt); }
+.m3d-gold, .m3d-ice, .m3d-red { color: var(--cobalt); }
+
+/* ---- pick-a-destination banner ---- */
+.m3d-dest { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 6px 6px 6px 18px; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); border-radius: 999px; font-weight: 700; font-size: var(--fs-2); white-space: nowrap; }
+.m3d-dest svg { font-size: 26px; }
+.m3d-dest .btn { pointer-events: auto; }
+
+/* ---- intro ---- */
+.m3d-intro { position: absolute; inset: 0; z-index: 50; }
+.m3d-intro-canvas { position: absolute; inset: 0; background: var(--space); }
+.m3d-intro-pati { position: absolute; left: 14px; bottom: 14px; display: flex; align-items: flex-end; gap: 10px; pointer-events: none; }
+/* phones in portrait: the welcome bubble moves to the top so Pati's pose and the Skip pill never cover it */
+@media (max-width: 700px) and (orientation: portrait) {
+  .m3d-intro-pati { inset: 0; display: block; }
+  .m3d-intro-pati > .m3d-pati { position: absolute; left: 14px; bottom: 14px; }
+  .m3d-intro-pati > .m3d-bubble { position: absolute; top: max(14px, env(safe-area-inset-top)); left: 14px; right: 14px; max-width: none; }
+}
+.m3d-gate { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+.m3d-start { min-height: 72px; padding: 0 44px; font-size: var(--fs-4); }
+.m3d-start svg { font-size: 1.1em; }
+.m3d-skip { position: absolute; right: 16px; bottom: 16px; padding: 8px 16px; border-radius: 999px; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); font-weight: 700; pointer-events: none; }
+
+/* ---- Pati poses ---- */
+.pati-pose { position: absolute; bottom: 84px; z-index: 12; display: block; height: min(36vh, 320px); pointer-events: none; }
+.pati-pose.right { right: 8px; animation: patislider .5s cubic-bezier(.2,.9,.3,1.2) both; }
+.pati-pose.left { left: 8px; animation: patislidel .5s cubic-bezier(.2,.9,.3,1.2) both; }
+.pati-pose.over { z-index: 45; bottom: 8px; }
+.pati-pose.small { height: min(24vh, 200px); }
+.pati-pose img { display: block; height: 100%; width: auto; object-fit: contain; }
+@keyframes patislider { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes patislidel { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+.pati-wm::after { content: 'SI-generated'; position: absolute; left: 50%; bottom: 2%; transform: translateX(-50%); padding: 1px 6px; border-radius: 999px; background: color-mix(in srgb, var(--space) 70%, transparent); color: var(--suit-white); font: 600 10px/1.3 var(--font-ui); white-space: nowrap; pointer-events: none; }
+.m3d-pati.pati-wm::after { bottom: -7px; font-size: 9px; padding: 0 5px; z-index: 2; }
+.pati-pose.center-stage img { max-width: calc((100vw - 660px) / 2 - 12px); }
+.pati-pose.over img { max-width: calc((100vw - 840px) / 2 - 16px); }
+@media (max-width: 1100px) { .pati-pose.over { display: none; } }
+@media (prefers-reduced-motion: reduce) { .pati-av-bob, .pati-av-img.in, .pati-pose.right, .pati-pose.left { animation: none; } }
+.m3d[data-reduce='true'] .pati-pose.right, .m3d[data-reduce='true'] .pati-pose.left { animation: none; }
+
+/* ---- landscape phones, tablets, desktop: top row is Pati | chest | language; gear buttons bottom-left ---- */
+@media (orientation: landscape), (min-width: 700px) {
+  .m3d-top { right: 12px; grid-template-columns: 1fr auto 1fr; }
+  .m3d-left { display: flex; align-items: flex-start; gap: 10px; grid-column: 1; grid-row: 1; min-width: 0; }
+  .m3d-gauges { grid-column: 2; }
+  .m3d-bubble { grid-column: auto; grid-row: auto; flex: 0 1 auto; max-width: 34ch; }
+  .m3d-top .m3d-lang { position: static; grid-column: 3; grid-row: 1; justify-self: end; flex-direction: row; }
+  .m3d-top .m3d-lang button { min-width: 48px; min-height: 44px; padding: 0 10px; }
+  .m3d-tools { right: auto; left: 12px; top: auto; bottom: 12px; }
+  .cc-pop { right: auto; left: calc(100% + 8px); }
+  .m3d-chiplabel { bottom: auto; top: 76px; left: 50%; transform: translateX(-50%); }
+  .m3d-pati { width: 64px; height: 64px; }
+}
+@media (max-width: 900px) {
+  .m3d-clock { display: none; }
+  .m3d-bar { gap: 6px; }
+}
+@media (max-height: 520px), (max-width: 700px) {
+  .m3d-pati { width: 52px; height: 52px; }
+  .m3d-pati.pati-av { width: 52px; height: 52px; }
+  .m3d-bubble { padding: 8px 12px; }
+  .m3d-build { width: 52px; height: 52px; font-size: 32px; }
+  .pati-pose { bottom: 72px; height: min(22vh, 170px); }
+  .pati-pose.small { height: min(16vh, 120px); }
+  .pati-pose.over { display: none; }
+  .pati-pose.center-stage img { max-width: none; }
+  .m3d-bar { padding-bottom: 4px; }
+}
+/* the pole flag stays; its text label would sit under the gear buttons on narrow screens */
+@media (max-width: 700px) { .m3d-pole-label { display: none; } }

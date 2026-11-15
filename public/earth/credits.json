@@ -1,0 +1,15 @@
+﻿{
+    "license":  "NASA media - public domain, credit required",
+    "title":  "Earth texture from NASA SVS 3615 (Blue Marble Next Generation based, no clouds)",
+    "files":  [
+                  {
+                      "pageUrl":  "https://svs.gsfc.nasa.gov/3615",
+                      "fetchedAt":  "2026-11-14T11:50:15Z",
+                      "sourceUrl":  "https://svs.gsfc.nasa.gov/vis/a000000/a003600/a003615/earth_noClouds.0330.jpg",
+                      "role":  "Earth colour map 1024x512 equirectangular, downscaled 2x (box filter) by us from the 2048x1024 original",
+                      "isLive":  false,
+                      "file":  "blue-marble-1k.jpg"
+                  }
+              ],
+    "credit":  "NASA\u0027s Scientific Visualization Studio. Blue Marble Next Generation data courtesy of Reto Stockli (NASA/GSFC) and NASA\u0027s Earth Observatory (Terra/Aqua MODIS). Coloration art-directed for a NASA production."
+}

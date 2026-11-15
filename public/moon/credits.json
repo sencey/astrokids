@@ -1,0 +1,23 @@
+﻿{
+    "license":  "NASA media - public domain, credit required",
+    "title":  "NASA SVS CGI Moon Kit (SVS 4720)",
+    "files":  [
+                  {
+                      "pageUrl":  "https://svs.gsfc.nasa.gov/4720",
+                      "fetchedAt":  "2026-11-14T11:50:15Z",
+                      "sourceUrl":  "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+                      "role":  "colour map, 2048x1024, equirectangular centred on 0 deg lon (unmodified download)",
+                      "isLive":  false,
+                      "file":  "color-2k.jpg"
+                  },
+                  {
+                      "pageUrl":  "https://svs.gsfc.nasa.gov/4720",
+                      "fetchedAt":  "2026-11-14T11:50:15Z",
+                      "sourceUrl":  "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_3_8bit.jpg",
+                      "role":  "displacement/height map, 8-bit grey, 1024x512 (unmodified download). Height scaling for the 8-bit file is not stated on the SVS page; use the 16-bit TIFFs there for exact values.",
+                      "isLive":  false,
+                      "file":  "displacement-1k.jpg"
+                  }
+              ],
+    "credit":  "NASA\u0027s Scientific Visualization Studio; visualizer Ernie Wright. Data: LRO LROC (color) and LOLA (elevation) instrument teams."
+}

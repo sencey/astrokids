@@ -1,0 +1,12 @@
+﻿import { chromium } from 'playwright-core';
+const b = await chromium.launch({ channel: 'msedge', headless: false });
+const ctx = await b.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
+const p = await ctx.newPage();
+await p.goto('http://localhost:5173/?nointro');
+await p.waitForFunction(() => window.__explore && window.__explore.getState().pois.length>1, null, { timeout: 90000 });
+await p.waitForTimeout(2000);
+const s0 = await p.evaluate(() => { const s=window.__explore.getState(); window.__explore.walkTo([s.pois.find(q=>q.id==='earth').x, s.pois.find(q=>q.id==='earth').z]); return s.pos; });
+await p.waitForTimeout(6000);
+const s1 = await p.evaluate(() => window.__explore.getState().pos);
+console.log(s0, s1, Math.hypot(s1[0]-s0[0], s1[1]-s0[1])/6, 'm/s');
+await b.close();

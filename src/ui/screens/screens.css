@@ -1,0 +1,146 @@
+/* ---- Mode select + mission map: big picture cards ---- */
+.mode,
+.map {
+  justify-content: center;
+}
+.mode__row,
+.map__row {
+  display: flex;
+  gap: clamp(14px, 3vw, 36px);
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.card {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 460px;
+  min-height: max(var(--tap-lg), 260px);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--cream), var(--cream-2));
+  box-shadow: 0 8px 0 var(--cream-3), 0 16px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s;
+}
+.card:active {
+  transform: translateY(4px);
+}
+.card--picked {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 6px var(--accent), 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+.card--captain {
+  background: linear-gradient(180deg, #dfe6ff, #b9c6f2);
+  box-shadow: 0 8px 0 #8d9bd0, 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+.card__pati .pati {
+  width: clamp(120px, 24vw, 190px);
+}
+.card__title {
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.card__sub {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.card__hint {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 56px;
+  height: 56px;
+}
+.card__hint svg {
+  width: 100%;
+  height: 100%;
+}
+.album {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  padding: 14px;
+  background: #fffaf0;
+  border-radius: 10px;
+  transform: rotate(-2deg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  border: 3px solid #8a5a2b;
+}
+.album__pic {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+.album__corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 0 solid #c9a56b;
+}
+.album__corner--a { top: 4px; left: 4px; border-top-width: 5px; border-left-width: 5px; }
+.album__corner--b { top: 4px; right: 4px; border-top-width: 5px; border-right-width: 5px; }
+.album__corner--c { bottom: 4px; left: 4px; border-bottom-width: 5px; border-left-width: 5px; }
+.album__corner--d { bottom: 4px; right: 4px; border-bottom-width: 5px; border-right-width: 5px; }
+.album__stamp {
+  position: absolute;
+  right: 6px;
+  bottom: -10px;
+  transform: rotate(-8deg);
+  padding: 3px 12px;
+  border: 3px solid #b8452f;
+  color: #b8452f;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.9);
+}
+.live__pic {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.live__pati .pati {
+  width: clamp(110px, 20vw, 160px);
+}
+.live__sun {
+  position: absolute;
+  left: 12%;
+  top: 0;
+  width: 70px;
+}
+.card--live-on {
+  box-shadow: 0 0 0 5px var(--accent), 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+.map__back {
+  align-self: flex-start;
+}
+.grownups-door {
+  position: absolute;
+  right: var(--gutter);
+  bottom: var(--safe-bottom);
+  min-width: var(--tap);
+  min-height: var(--tap);
+  border-radius: 20px;
+  color: rgba(255, 246, 214, 0.55);
+  display: grid;
+  place-items: center;
+}
+.grownups-door svg {
+  width: 34px;
+}
+@media (max-width: 560px) {
+  .grownups-door {
+    position: static;
+    align-self: flex-end;
+  }
+}

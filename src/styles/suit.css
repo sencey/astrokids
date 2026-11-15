@@ -1,0 +1,149 @@
+/*
+  Moon Base Commander: spacesuit gear tokens, fonts and shared controls.
+  Every colour in the 3D UI comes from here (no stray hex elsewhere in src/ui3d).
+
+  Contrast (WCAG, computed):
+    cobalt on suit-white 11.4   cobalt on suit-shade 9.3   suit-white on cobalt 11.4
+    sun on cobalt 7.8   visor on cobalt 5.5   dose on cobalt 4.5   orange on cobalt 4.0 (graphics only, needs 3)
+    cobalt on orange 4.0  -> only used for 19px+ bold text (large text needs 3)
+    cobalt on sun 7.8   cobalt on visor 5.5   suit-white on alarm 4.1 (alarm text is 26px bold = large text)
+    focus ring: orange outline + 2px cobalt inner ring (orange alone is 2.8 on white)
+*/
+:root {
+  --suit-white: #F2F4F8; /* panels */
+  --suit-shade: #D9DEE8; /* panel edges, insets, stitching */
+  --cobalt: #1C2B78; /* ink on white, the chest panel */
+  --orange: #FF5A1F; /* primary action, focus ring */
+  --visor: #4DB3FF; /* life support, info */
+  --sun: #FFC23D; /* energy */
+  --dose: #9D8CF0; /* radiation */
+  --regolith: #8C8C8A; /* spent / inactive */
+  --space: #05070D; /* only behind the 3D scene */
+  --alarm: #E5262E; /* alarm overlay only */
+
+  --font-ui: 'Lexend', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Saira Stencil One', 'Lexend', system-ui, sans-serif;
+
+  /* type scale: mobile; +2px on desktop below */
+  --fs-1: 15px;
+  --fs-2: 17px;
+  --fs-3: 20px;
+  --fs-4: 26px;
+  --fs-5: 34px;
+  --measure: 56ch;
+
+  --r-panel: 14px;
+  --r-tile: 12px;
+  --r-chest: 18px;
+  --r-bubble: 16px;
+  --r-chip: 8px;
+  --hard: 3px; /* hard offset of sticker buttons */
+  --tap: 48px;
+  --tap-lg: 64px;
+}
+@media (min-width: 900px) and (min-height: 600px) {
+  :root {
+    --fs-1: 17px;
+    --fs-2: 19px;
+    --fs-3: 22px;
+    --fs-4: 28px;
+    --fs-5: 36px;
+  }
+}
+
+/* ---- fonts: latin + latin-ext only (ğ ş ı İ live in latin / latin-ext); weights 400/600/700 + stencil 400 ---- */
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 400; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 400; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-ext-400-normal.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 600; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 600; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-ext-600-normal.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 700; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Lexend'; font-style: normal; font-display: swap; font-weight: 700; src: url('../../node_modules/@fontsource/lexend/files/lexend-latin-ext-700-normal.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Saira Stencil One'; font-style: normal; font-display: swap; font-weight: 400; src: url('../../node_modules/@fontsource/saira-stencil-one/files/saira-stencil-one-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Saira Stencil One'; font-style: normal; font-display: swap; font-weight: 400; src: url('../../node_modules/@fontsource/saira-stencil-one/files/saira-stencil-one-latin-ext-400-normal.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+/* ---- the 3D game root ---- */
+.m3d, .m3d-boot {
+  position: fixed;
+  inset: 0;
+  background: var(--space);
+  color: var(--suit-white);
+  font-family: var(--font-ui);
+  font-size: var(--fs-2);
+  font-weight: 400;
+  line-height: 1.4;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* element resets use :where() so they never out-rank component classes (.rb, .btn, ...) */
+:where(.m3d button) { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+:where(.m3d svg) { display: block; }
+:where(.m3d) :where(h1, h2, h3, h4, p) { margin: 0; }
+
+/* ---- focus: a 3px orange ring on everything focusable, with a cobalt inner ring so it also reads on white ---- */
+.m3d :focus { outline: none; }
+.m3d :focus-visible, .m3d-boot :focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--cobalt);
+}
+.m3d .btn.primary:focus-visible { box-shadow: var(--hard) var(--hard) 0 var(--cobalt), 0 0 0 2px var(--cobalt); }
+
+/* ---- sticker buttons ---- */
+.btn {
+  min-height: var(--tap);
+  padding: 0 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-2);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  border: 2px solid var(--cobalt);
+}
+/* primary: international orange, chunky, 3px hard cobalt shadow that collapses on press */
+.btn.primary {
+  min-height: var(--tap-lg);
+  padding: 0 30px;
+  font-size: var(--fs-3);
+  background: var(--orange);
+  color: var(--cobalt);
+  box-shadow: var(--hard) var(--hard) 0 var(--cobalt);
+}
+.btn.primary:active:not(:disabled) { transform: translate(var(--hard), var(--hard)); box-shadow: 0 0 0 var(--cobalt); }
+.btn.primary.compact { min-height: var(--tap); padding: 0 20px; font-size: var(--fs-2); }
+.btn.primary:disabled { background: var(--suit-shade); color: var(--cobalt); box-shadow: none; border-style: dashed; cursor: not-allowed; }
+.btn.secondary { background: var(--suit-white); color: var(--cobalt); }
+.btn.secondary:active { background: var(--suit-shade); }
+.btn:disabled { cursor: not-allowed; }
+.btn svg { font-size: 1.25em; flex: none; }
+
+/* ---- round gear buttons (HUD) ---- */
+.rb {
+  width: var(--tap);
+  height: var(--tap);
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: var(--suit-white);
+  color: var(--cobalt);
+  border: 2px solid var(--cobalt);
+  padding: 0;
+}
+.rb:active { background: var(--suit-shade); }
+.rb.on { background: var(--cobalt); color: var(--suit-white); border-color: var(--suit-white); }
+.rb.go { background: var(--orange); }
+.rb.stop { background: var(--suit-white); }
+.rb:disabled { opacity: 0.5; }
+
+/* ---- reduced motion: the OS setting or the in-game setting (data-reduce on .m3d) ---- */
+@media (prefers-reduced-motion: reduce) {
+  .m3d *, .m3d *::before, .m3d *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+.m3d[data-reduce='true'] *, .m3d[data-reduce='true'] *::before, .m3d[data-reduce='true'] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

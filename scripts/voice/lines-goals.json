@@ -1,0 +1,61 @@
+﻿[
+    [
+        "moon3d.goal.walkToFlag",
+        "Walk to the flag. Walking uses energy, and that is how explorers find new places."
+    ],
+    [
+        "moon3d.goal.buildTower",
+        "Build a solar tower. A tower makes energy from sunlight, starting tomorrow."
+    ],
+    [
+        "moon3d.goal.findIce",
+        "Find ice. Shadowed craters hide ice, and ice becomes water and air."
+    ],
+    [
+        "moon3d.goal.endDay",
+        "Go home, end the day. The base needs energy to keep running through the night."
+    ],
+    [
+        "moon3d.goal.shieldUp",
+        "Build a shield first. Real data shows a storm is coming. A shield keeps us safe."
+    ],
+    [
+        "moon3d.goal.buildBattery",
+        "Build a battery unit. Dark days are coming, and a battery saves sunshine for them."
+    ],
+    [
+        "moon3d.goal.saveEnergy",
+        "Save your energy. Dark days are coming, so keep the battery full."
+    ],
+    [
+        "moon3d.goal.explore-visitIce",
+        "Visit a shadow crater. Shadowed places hide ice."
+    ],
+    [
+        "moon3d.goal.explore-findSun",
+        "Find a sunny peak. Sunny places are good for towers."
+    ],
+    [
+        "moon3d.goal.explore-lookEarth",
+        "See Earth on the horizon. Earth hangs in nearly the same spot in the sky."
+    ],
+    [
+        "moon3d.goal.explore-geology",
+        "Find an interesting place. Rocks tell the story of the Moon\u0027s past."
+    ],
+    [
+        "moon3d.goal.explore-walk1km",
+        "Walk 1 kilometre. Going farther costs more energy.",
+        "Walk one kilometre. Going farther costs more energy."
+    ],
+    [
+        "moon3d.goal.explore-walk2km",
+        "Walk 2 kilometres. Going farther costs more energy.",
+        "Walk two kilometres. Going farther costs more energy."
+    ],
+    [
+        "moon3d.goal.explore-discover2",
+        "Discover 2 places today. Every discovery earns science points.",
+        "Discover two places today. Every discovery earns science points."
+    ]
+]

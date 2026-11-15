@@ -1,0 +1,6 @@
+import fs from 'fs';
+const p = '../../public/terrain/connecting-ridge/meta.json';
+const m = JSON.parse(fs.readFileSync(p, 'utf8'));
+m.gridNorthNote = 'Grid north = +y of the polar stereographic plane = TOP of the map image (row 0). +col = +x = grid east (right); +row = grid south (down). Viewed from above the surface, not mirrored. Azimuth in sun/earth json = degrees clockwise from grid north (0 = image up, 90 = image right, 180 = down, 270 = left). Grid north is NOT geographic north: at a point with east longitude L, geographic north (away from the south pole) lies at grid azimuth = L (about 206.6 deg at the site centre, i.e. down-left); the south pole itself is just above the top edge (see poleGridPosition).';
+m.validation.note = 'Computed lit% = mean over the 15 May-2024 days (UTC, 10-min steps, point Sun, DEM shadows only). The NASA map is the LOLA average illumination (PGDA product 69, Mazarico et al. 2011: hourly steps over a long lunar nutation cycle, product dated 2016-08), so the two are NOT expected to agree exactly. In May 2024 the sub-solar latitude is about +0.9..+1.2 deg, i.e. the Sun stays slightly below the geometric horizon of the pole, a plausible reason why the 15-day mean is lower than the long-term mean. Treat the numbers as a sanity check, not an accuracy claim.';
+fs.writeFileSync(p, JSON.stringify(m, null, 1));

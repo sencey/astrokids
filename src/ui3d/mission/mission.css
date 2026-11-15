@@ -1,0 +1,224 @@
+/* Mission UI: chest panel, the cuff checklist (briefing / plan / report), modal sheets, alarm, guide ring. Tokens: src/styles/suit.css */
+
+/* ---- chest panel: Pati's suit screen ---- */
+.chest { display: flex; align-items: center; gap: 10px; padding: 6px 12px; background: var(--cobalt); color: var(--suit-white); border: 2px solid var(--suit-shade); border-radius: var(--r-chest); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--visor) 40%, transparent); }
+.cx { position: relative; display: flex; align-items: center; gap: 5px; }
+.cx-ic { font-size: 26px; }
+.cx-ic.sun { color: var(--sun); }
+.cx-seg { display: flex; gap: 2px; width: clamp(44px, 13vw, 120px); }
+.cx-seg i { flex: 1; min-width: 1px; height: 24px; border-radius: 2px; background: color-mix(in srgb, var(--suit-white) 22%, transparent); }
+.cx-seg i.on { background: var(--sun); }
+.cx-seg i.half { background: linear-gradient(90deg, var(--sun) 50%, color-mix(in srgb, var(--suit-white) 22%, transparent) 50%); }
+.cx-seg i.ghost { background: transparent; box-shadow: inset 0 0 0 2px var(--sun); }
+/* narrow screens: 20 units read as 10 double-unit segments */
+.cx-seg.coarse { display: none; }
+@media (max-width: 700px) {
+  .cx-seg.fine { display: none; }
+  .cx-seg.coarse { display: flex; gap: 3px; }
+}
+.cx-tank { width: 26px; height: 36px; }
+.cx-tank-cap { stroke: var(--suit-white); stroke-width: 3; stroke-linecap: round; fill: none; }
+.cx-tank-bg { fill: color-mix(in srgb, var(--visor) 22%, transparent); }
+.cx-tank-fill { fill: var(--visor); }
+.cx-tank.low .cx-tank-fill { fill: var(--orange); }
+.cx-tank-line { fill: none; stroke: var(--suit-white); stroke-width: 3; }
+.cx-dose { width: 40px; height: 40px; }
+.cx-ring { width: 40px; height: 40px; }
+.cx-ring-bg { fill: none; stroke: color-mix(in srgb, var(--suit-white) 25%, transparent); stroke-width: 5; }
+.cx-ring-arc { fill: none; stroke: var(--dose); stroke-width: 5; stroke-linecap: round; }
+.cx-ring-arc.hot { stroke: var(--orange); }
+.cx-radic { position: absolute; left: 10px; top: 10px; font-size: 20px; color: var(--dose); }
+.cx-radic.hot { color: var(--orange); }
+.cx-sci b { font-size: var(--fs-3); font-weight: 700; line-height: 1; min-width: 1ch; }
+
+/* ---- shared bits on white paper ---- */
+.m3d .gold { color: var(--sun); }
+.m3d .rad { color: var(--dose); }
+.c3d-sheet .gold, .c3d-sheet .rad, .ck .gold, .ck .rad { color: var(--cobalt); }
+.chip { display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: var(--r-chip); background: var(--cobalt); color: var(--suit-white); font-weight: 700; line-height: 1; }
+.chip.bolts { color: var(--sun); font-size: 20px; flex-wrap: wrap; min-height: 28px; }
+.chip.bolts.spent { color: var(--regolith); }
+.chip.bolts small { font-size: var(--fs-1); margin-left: 2px; font-weight: 700; }
+.chip.bolts.spent small { color: var(--suit-shade); }
+.chip.gives { font-size: 22px; gap: 4px; min-height: 28px; }
+.chip.gives b { font-size: var(--fs-1); color: var(--suit-white); }
+.gv-air { color: var(--visor); }
+.gv-dose { color: var(--dose); }
+.gv-star { color: var(--sun); }
+.c3d-pair { display: inline-flex; align-items: center; gap: 2px; }
+.c3d-pair svg { font-size: 0.62em; }
+.btn.sm { min-height: var(--tap); padding: 0 14px; font-size: var(--fs-1); }
+
+/* ---- the cuff checklist ---- */
+.ck {
+  position: absolute;
+  z-index: 15;
+  right: 12px;
+  top: 76px;
+  bottom: 12px;
+  width: clamp(300px, 31vw, 380px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 12px;
+  background: var(--suit-white);
+  background-image: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--cobalt) 4%, transparent) 3px 4px);
+  color: var(--cobalt);
+  border: 2px solid var(--suit-shade);
+  border-radius: var(--r-panel);
+  font-size: var(--fs-2);
+  transition: transform 0.28s ease-out, visibility 0s;
+}
+.ck::after { content: ''; position: absolute; inset: 6px; border: 1px dashed var(--suit-shade); border-radius: 9px; pointer-events: none; } /* stitch line */
+.ck[data-away='true'] { transform: translateX(calc(100% + 24px)); visibility: hidden; transition: transform 0.28s ease-in, visibility 0s 0.28s; }
+/* spiral rings straddle the top edge; on a phone sheet the strip is also the grab handle */
+.ck-rings { flex: none; display: flex; justify-content: space-around; align-items: flex-start; height: 26px; margin: -12px 10px 0; padding: 0; background: none; border: 0; cursor: default; touch-action: none; position: relative; z-index: 1; }
+.ck-rings i { width: 12px; height: 24px; box-sizing: border-box; border: 3px solid var(--cobalt); border-radius: 8px; background: var(--suit-shade); }
+.ck-tabs { flex: none; display: flex; gap: 6px; padding: 4px 0 8px; position: relative; z-index: 1; }
+.ck-tab { flex: 1; min-width: 0; min-height: var(--tap); display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 6px; border-radius: 10px; border: 2px solid var(--suit-shade); background: var(--suit-white); color: var(--cobalt); font-size: var(--fs-1); font-weight: 600; }
+.ck-tab b { flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--cobalt); font-size: 14px; line-height: 1; }
+.ck-tab span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ck-tab.on { background: var(--cobalt); color: var(--suit-white); border-color: var(--cobalt); }
+.ck-tab.on b { border-color: var(--suit-white); }
+.ck-tab:disabled:not(.on) { border-style: dashed; cursor: not-allowed; }
+/* the page turns about its top edge, where the spiral is */
+.ck-page { position: relative; z-index: 1; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; transform-origin: 50% 0; animation: ck-flip 0.26s cubic-bezier(0.2, 0.8, 0.3, 1) both; }
+@keyframes ck-flip { from { transform: perspective(700px) rotateX(-72deg); opacity: 0.25; } to { transform: perspective(700px) rotateX(0); opacity: 1; } }
+.ck-head { flex: none; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.ck-head h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-5); line-height: 1.05; color: var(--cobalt); }
+.ck-date { font-size: var(--fs-1); font-weight: 600; }
+.ck-body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding: 2px 4px 6px 2px; scrollbar-width: thin; scrollbar-color: var(--cobalt) transparent; }
+.ck-foot { flex: none; display: flex; gap: 8px; padding-top: 8px; border-top: 1px dashed var(--suit-shade); }
+.ck-foot .btn { flex: 1; }
+.ck-foot.two .btn.secondary { flex: 0 0 auto; }
+.ck-note { display: flex; align-items: center; gap: 6px; max-width: var(--measure); font-size: var(--fs-1); line-height: 1.4; }
+.ck-note svg { flex: none; font-size: 22px; }
+.ck-weather { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--suit-shade); border-radius: var(--r-tile); font-size: var(--fs-2); font-weight: 600; }
+.ck-weather svg { flex: none; font-size: 34px; }
+.ck-weather.storm, .ck-weather.super { background: var(--sun); }
+.ck-weather.super { box-shadow: inset 0 0 0 2px var(--cobalt); }
+.ck-towers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ck-towers li { display: flex; align-items: center; gap: 10px; min-height: var(--tap); padding: 4px 8px; border: 2px solid var(--suit-shade); border-radius: var(--r-tile); font-size: 30px; }
+.ck-towers li .chip { margin-left: auto; }
+.ck-suns { display: inline-flex; font-size: 22px; }
+.ck-suns svg { color: var(--suit-shade); }
+.ck-suns svg.on { color: var(--cobalt); }
+.ck-sum { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: var(--fs-1); font-weight: 600; }
+.ck-pool { display: inline-flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* plan: action rows */
+.ck-acts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.act-wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.act { flex: 1 1 100%; min-height: 60px; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 10px; padding: 6px 10px; text-align: left; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--cobalt); border-radius: var(--r-tile); }
+.act:active:not(:disabled) { background: var(--suit-shade); }
+.act.on { background: var(--orange); }
+.act:disabled { background: var(--suit-shade); border-style: dashed; cursor: not-allowed; }
+.act:disabled .act-ic { opacity: 0.55; }
+.act-ic { position: relative; display: grid; place-items: center; font-size: 34px; color: var(--cobalt); }
+.act-check { position: absolute; right: -6px; top: -6px; box-sizing: content-box; width: 14px; height: 14px; padding: 3px; font-size: 14px; background: var(--cobalt); color: var(--suit-white); border-radius: 50%; }
+.act-txt { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+.act-name { font-size: var(--fs-3); font-weight: 700; line-height: 1.15; }
+.act-reason { flex: 1 1 100%; margin: 0; padding-left: 4px; font-size: var(--fs-1); font-weight: 600; }
+.act-pick { flex: 1 1 100%; display: flex; align-items: center; gap: 10px; }
+.act-dist { font-size: var(--fs-2); font-weight: 700; }
+
+/* report */
+.rp { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.rp li { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.rp small { font-size: var(--fs-1); font-weight: 600; }
+.rp-arrow { font-size: 24px; font-weight: 700; }
+.rp-tank { width: 30px; height: 42px; }
+.rp-tank-fill { fill: var(--visor); }
+.rp-tank-line { fill: none; stroke: var(--cobalt); stroke-width: 3; stroke-linecap: round; }
+.c3d-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.c3d-chip { font-size: var(--fs-1); font-weight: 600; padding: 4px 10px; border-radius: var(--r-chip); background: var(--suit-shade); color: var(--cobalt); }
+.c3d-chip.ev-darkDay, .c3d-chip.ev-earlyReturn, .c3d-chip.ev-alarm { background: var(--sun); }
+.c3d-chip.ev-batteryFull, .c3d-chip.ev-resupply { background: var(--visor); }
+
+/* ---- centred panels: mode, cargo ---- */
+.c3d-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 15; }
+.c3d-panel { position: relative; pointer-events: auto; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--suit-shade); border-radius: var(--r-panel); padding: 18px; display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: min(94vw, 640px); max-height: calc(100vh - 100px); overflow: auto; }
+.c3d-panel::before { content: ''; position: absolute; inset: 6px; border: 1px dashed var(--suit-shade); border-radius: 9px; pointer-events: none; }
+.c3d-panel > * { position: relative; }
+.c3d-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; align-items: center; }
+.c3d-card { position: relative; width: 150px; height: 150px; border-radius: var(--r-tile); border: 2px solid var(--cobalt); background: var(--suit-white); color: var(--cobalt); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-size: 54px; text-align: center; padding: 6px; }
+.c3d-card:active:not(:disabled) { background: var(--suit-shade); }
+.c3d-card.on { background: var(--orange); }
+.c3d-card > span:not(.c3d-pair) { font-size: var(--fs-1); font-weight: 700; line-height: 1.15; padding: 3px 8px; border-radius: var(--r-chip); background: var(--suit-white); }
+.c3d-card .mname { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-3); }
+.c3d-card:disabled { background: var(--suit-shade); border-style: dashed; }
+.c3d-tick { position: absolute; top: -8px; right: -8px; box-sizing: content-box; width: 18px; height: 18px; padding: 4px; font-size: 18px; background: var(--cobalt); color: var(--suit-white); border-radius: 50%; }
+.c3d-plus { font-size: 0.5em; }
+.c3d-note { max-width: var(--measure); font-size: var(--fs-1); }
+.c3d-badge2 { font-size: var(--fs-1); font-weight: 700; padding: 2px 10px; border-radius: var(--r-chip); background: var(--suit-shade); color: var(--cobalt); }
+.c3d-badge2.arch { background: var(--sun); }
+.c3d-badge2.live { background: var(--visor); }
+
+/* ---- alarm: the only place --alarm is used ---- */
+.c3d-alarm { position: absolute; left: 0; right: 0; top: 30%; display: flex; flex-direction: column; align-items: center; gap: 12px; pointer-events: auto; z-index: 30; background: var(--alarm); color: var(--suit-white); padding: 16px; border-block: 3px solid var(--suit-white); animation: c3dpulse 1s ease-in-out infinite alternate; }
+.c3d-alarm b { font-size: var(--fs-4); font-weight: 700; }
+.c3d-alarm-bell { font-size: 56px; }
+.c3d-recall { min-height: 72px; padding: 0 40px; font-size: var(--fs-4); background: var(--suit-white); color: var(--cobalt); box-shadow: var(--hard) var(--hard) 0 var(--cobalt); }
+.c3d-recall:active { transform: translate(var(--hard), var(--hard)); box-shadow: 0 0 0 var(--cobalt); }
+.c3d-timer { width: min(80vw, 360px); height: 10px; background: color-mix(in srgb, var(--cobalt) 60%, transparent); border-radius: 5px; overflow: hidden; }
+.c3d-timer i { display: block; height: 100%; width: 100%; background: var(--suit-white); transform-origin: left; animation: c3dshrink linear forwards; }
+@keyframes c3dshrink { to { transform: scaleX(0); } }
+@keyframes c3dpulse { to { opacity: 0.82; } }
+
+/* ---- modal sheets: notebook, sources, end screens ---- */
+.c3d-modal { position: absolute; inset: 0; z-index: 40; background: color-mix(in srgb, var(--space) 72%, transparent); display: flex; align-items: center; justify-content: center; pointer-events: auto; padding: 10px; }
+.c3d-modal.solid { background: color-mix(in srgb, var(--space) 90%, transparent); }
+.c3d-sheet { position: relative; background: var(--suit-white); color: var(--cobalt); border: 2px solid var(--suit-shade); border-radius: var(--r-panel); padding: 18px 22px; max-width: min(94vw, 560px); max-height: 92vh; overflow: auto; display: flex; flex-direction: column; gap: 10px; font-size: var(--fs-1); line-height: 1.45; user-select: text; -webkit-user-select: text; }
+.c3d-sheet::before { content: ''; position: absolute; inset: 6px; border: 1px dashed var(--suit-shade); border-radius: 9px; pointer-events: none; }
+.c3d-sheet.wide { max-width: min(96vw, 820px); }
+.c3d-sheet h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-5); line-height: 1.05; }
+.c3d-sheet h3 { font-size: var(--fs-3); font-weight: 700; }
+.c3d-sheet h4 { font-size: var(--fs-2); font-weight: 700; margin-top: 6px; }
+.c3d-sheet p, .c3d-sheet li { max-width: var(--measure); }
+.c3d-archive, .c3d-sheet .live-label { align-self: flex-start; background: var(--sun); color: var(--cobalt); font-weight: 700; padding: 2px 12px; border-radius: var(--r-chip); font-size: var(--fs-1); }
+.c3d-sheet .live-label { background: var(--visor); }
+.c3d-facts { margin: 0; padding-left: 20px; }
+.c3d-facts small { display: block; opacity: 1; font-size: var(--fs-1); }
+.c3d-result { font-weight: 700; font-size: var(--fs-2); }
+.c3d-endrow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: var(--fs-3); font-weight: 700; }
+.c3d-endrow > span { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--r-tile); background: var(--cobalt); color: var(--suit-white); }
+.c3d-endrow > span .gold { color: var(--sun); }
+.c3d-endrow > span .rad { color: var(--dose); }
+.c3d-endrow > span small { font-size: var(--fs-1); font-weight: 600; }
+.c3d-endrow > span.c3d-badge { background: var(--sun); color: var(--cobalt); font-size: var(--fs-1); }
+.c3d-bars > div { display: grid; grid-template-columns: minmax(90px, 150px) 1fr 70px; align-items: center; gap: 8px; margin: 4px 0; }
+.c3d-bars i { display: block; height: 14px; border-radius: 4px; background: var(--cobalt); }
+.c3d-sun, .c3d-lesson { font-weight: 700; }
+.c3d-lesson { font-size: var(--fs-2); }
+.c3d-rules { width: 100%; border-collapse: collapse; font-size: var(--fs-1); }
+.c3d-rules td { border-top: 1px solid var(--suit-shade); padding: 4px 6px; vertical-align: top; }
+.c3d-rules .asm, .c3d-rules .src { font-weight: 600; }
+.c3d-sheet summary { min-height: var(--tap); display: flex; align-items: center; cursor: pointer; font-weight: 600; }
+
+/* ---- guided first day: a pulsing ring on the exact element ---- */
+.gd-ring { position: fixed; z-index: 60; pointer-events: none; border: 3px solid var(--orange); border-radius: 16px; animation: gd-pulse 1.3s ease-out infinite; }
+@keyframes gd-pulse { from { box-shadow: 0 0 0 0 color-mix(in srgb, var(--orange) 70%, transparent); } to { box-shadow: 0 0 0 14px transparent; } }
+.m3d-bubble .gd-ctl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+@media (prefers-reduced-motion: reduce) { .gd-ring { box-shadow: 0 0 0 5px color-mix(in srgb, var(--orange) 45%, transparent); } }
+.m3d[data-reduce='true'] .gd-ring { box-shadow: 0 0 0 5px color-mix(in srgb, var(--orange) 45%, transparent); }
+
+/* ---- phone portrait: the checklist is a bottom sheet (rings = grab handle), never over the base marker ---- */
+@media (orientation: portrait) and (max-width: 699px) {
+  .ck { left: 8px; right: 8px; top: auto; bottom: 0; width: auto; height: 50vh; height: 50dvh; border-radius: var(--r-panel) var(--r-panel) 0 0; border-bottom: 0; padding-bottom: 8px; transition: transform 0.28s ease-out, height 0.2s ease-out, visibility 0s; }
+  .ck[data-expanded='true'] { height: 86vh; height: 86dvh; }
+  .ck[data-away='true'] { transform: translateY(calc(100% + 24px)); }
+  .ck-rings { height: 48px; margin: -12px 0 0; padding: 0 6px 24px; cursor: grab; align-items: flex-start; }
+  .ck-rings::after { content: ''; position: absolute; left: 50%; bottom: 8px; width: 44px; height: 6px; margin-left: -22px; border-radius: 3px; background: var(--cobalt); }
+  .ck-tabs { padding-top: 0; }
+  .ck-head h2 { font-size: var(--fs-4); }
+  .m3d-chiplabel { bottom: calc(50dvh + 10px); }
+}
+@media (max-height: 520px), (max-width: 700px) {
+  .c3d-overlay { padding-top: 60px; }
+  .c3d-panel { max-height: calc(100vh - 70px); padding: 12px; gap: 8px; }
+  .c3d-card, .c3d-row.big .c3d-card { width: 100px; height: 112px; font-size: 38px; }
+}
+/* landscape phones: tighter checklist */
+@media (orientation: landscape) and (max-height: 520px) {
+  .ck { top: 68px; bottom: 8px; right: 8px; }
+  .ck-head h2 { font-size: var(--fs-4); }
+}

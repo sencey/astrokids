@@ -1,0 +1,139 @@
+.gate {
+  justify-content: center;
+  gap: 24px;
+}
+.gate h1 {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  text-align: center;
+  margin: 0;
+}
+.gate__back {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--gutter);
+}
+.gate__grid {
+  display: grid;
+  grid-template-columns: repeat(3, var(--tap-lg));
+  gap: 14px;
+}
+.gate__btn {
+  width: var(--tap-lg);
+  height: var(--tap-lg);
+  font-size: 2rem;
+  padding: 0;
+}
+.grownups {
+  align-items: stretch;
+  max-width: 960px;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.gu-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.gu-head h1 {
+  margin: 0;
+}
+.gu-card {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+}
+.gu-card h2 {
+  margin: 6px 0;
+  font-size: 1.15rem;
+}
+.gu-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: var(--tap);
+  font-weight: 800;
+}
+.gu-row input[type='range'] {
+  flex: 1 1 200px;
+  max-width: 360px;
+  height: 44px;
+  accent-color: var(--accent);
+}
+.gu-check {
+  width: 44px;
+  height: 44px;
+  accent-color: var(--accent);
+}
+.gu-seg {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.gu-seg .btn {
+  box-shadow: 0 4px 0 var(--cream-3);
+  background: #fff;
+  font-size: 1rem;
+}
+.gu-seg .btn--accent {
+  background: var(--accent);
+}
+.gu-legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gu-sources {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gu-sources li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.gu-sources code {
+  font-size: 0.72rem;
+  word-break: break-all;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.gu-table {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.88rem;
+}
+.gu-tr {
+  display: grid;
+  grid-template-columns: 2.2fr 1.2fr 1.6fr;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.gu-tr > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  word-break: break-word;
+}
+.gu-tr--head {
+  font-weight: 900;
+}
+.gu-tr small {
+  opacity: 0.75;
+}
+@media (max-width: 560px) {
+  .gu-tr {
+    grid-template-columns: 1fr;
+  }
+}

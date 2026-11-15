@@ -1,0 +1,68 @@
+.wake {
+  justify-content: center;
+}
+.wake__capsule {
+  position: relative;
+  width: min(92vw, 640px);
+  min-height: min(70vh, 420px);
+  border-radius: 120px 120px 40px 40px;
+  background: linear-gradient(180deg, #151a33, #0b0f24);
+  border: 8px solid #2b3358;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(20, 30, 90, 0.7);
+  transition: background 1s;
+}
+.wake__capsule--lit {
+  background: linear-gradient(180deg, #3a3560, #1b2340);
+}
+.wake__window {
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #2b3358;
+  background: radial-gradient(circle at 70% 30%, #fff6d6 0 2px, transparent 3px), #070b1f;
+}
+.wake__pati {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+.wake__pati .pati {
+  width: clamp(190px, 38vh, 300px);
+}
+.wake__paw {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: 64px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: pawPulse 2.2s ease-in-out infinite;
+}
+@keyframes pawPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+}
+.wake__bed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #2a3566;
+  border-radius: 30px 30px 0 0;
+}

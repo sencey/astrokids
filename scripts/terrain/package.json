@@ -1,0 +1,1 @@
+{"name":"astrakids-terrain","private":true,"version":"1.0.0","type":"module","dependencies":{"astronomy-engine":"2.1.19","geotiff":"2.1.3","jpeg-js":"0.4.4","pngjs":"7.0.0"}}

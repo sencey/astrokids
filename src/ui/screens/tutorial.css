@@ -1,0 +1,64 @@
+.tutorial {
+  padding-top: 8px;
+}
+.tut-frame {
+  width: min(70vw, 300px);
+  min-height: var(--tap-lg);
+  border-radius: 20px;
+  animation: frameGlow 2.6s ease-in-out infinite;
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 0 40px 10px rgba(255, 190, 90, 0.55);
+}
+@keyframes frameGlow {
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 4px var(--accent-soft), 0 0 60px 16px rgba(255, 190, 90, 0.7);
+  }
+}
+.frame__svg,
+.frame__anim {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+.tut-anim {
+  width: min(80vw, 420px);
+}
+.frame__chute {
+  animation: chuteDown 4.4s ease-in-out both;
+}
+@keyframes chuteDown {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(46px);
+  }
+}
+.frame__tail {
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation: tailWag 0.7s ease-in-out infinite alternate;
+}
+@keyframes tailWag {
+  from {
+    transform: rotate(-16deg);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}
+.frame__mouse {
+  animation: peek 3.6s ease-in-out 1.2s both;
+}
+@keyframes peek {
+  0% {
+    transform: translateY(24px);
+  }
+  30%,
+  70% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(24px);
+  }
+}

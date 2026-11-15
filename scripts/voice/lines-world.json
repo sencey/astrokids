@@ -1,0 +1,118 @@
+﻿[
+    [
+        "moon3d.wWelcome",
+        "Commander, welcome to the Moon\u0027s south pole! Let\u0027s walk together."
+    ],
+    [
+        "moon3d.wMorning",
+        "Good morning, Commander! A new day begins."
+    ],
+    [
+        "moon3d.wAlertMorning",
+        "It is dangerous outside today. Do not go far!"
+    ],
+    [
+        "moon3d.wStormMorning",
+        "Space weather is lively today. Keep your eyes open!"
+    ],
+    [
+        "moon3d.wIce",
+        "We found ice! Great for water and air."
+    ],
+    [
+        "moon3d.wBuilt",
+        "The tower is ready! It makes energy from tomorrow."
+    ],
+    [
+        "moon3d.wBuiltBattery",
+        "The battery is ready! We can store more energy."
+    ],
+    [
+        "moon3d.wBuiltGreenhouse",
+        "The greenhouse is ready! Plants make air."
+    ],
+    [
+        "moon3d.wBuildPrompt",
+        "Tap a golden spot. More sun means more energy!"
+    ],
+    [
+        "moon3d.wShieldBuilt",
+        "The shield is ready! It cuts radiation."
+    ],
+    [
+        "moon3d.wGreenOn",
+        "Greenhouse lights are on!"
+    ],
+    [
+        "moon3d.wStorm",
+        "Storm! Run back to base now!"
+    ],
+    [
+        "moon3d.wSafe",
+        "Well done! We made it back in time."
+    ],
+    [
+        "moon3d.wSafeInside",
+        "The storm came, but we are safe inside the base."
+    ],
+    [
+        "moon3d.wLate",
+        "We were a bit late, but we made it."
+    ],
+    [
+        "moon3d.wLowEnergy",
+        "Energy is getting low. Shall we go home?"
+    ],
+    [
+        "moon3d.wNoEnergy",
+        "Out of energy. Let\u0027s go home."
+    ],
+    [
+        "moon3d.needEnergy",
+        "Not enough energy."
+    ],
+    [
+        "moon3d.poi.sun",
+        "The Sun shines here about 75 percent of the time. A great spot for solar panels!",
+        "The Sun shines here about seventy five percent of the time. A great spot for solar panels!"
+    ],
+    [
+        "moon3d.poi.rim",
+        "Shackleton crater at the Moon\u0027s south pole is about 21 kilometres wide and over 4 kilometres deep.",
+        "Shackleton crater at the Moon\u0027s south pole is about twenty one kilometres wide and over four kilometres deep."
+    ],
+    [
+        "moon3d.poi.earth",
+        "From here Earth is above the horizon almost all the time. Radio goes straight home."
+    ],
+    [
+        "moon3d.poi.ice-1",
+        "Sunlight never reaches this crater floor, 50 metres lower than the ground around it. Ice could hide here.",
+        "Sunlight never reaches this crater floor, fifty metres lower than the ground around it. Ice could hide here."
+    ],
+    [
+        "moon3d.poi.ice-2",
+        "This permanent shadow is as big as about 73 football pitches. The Sun never shines there.",
+        "This permanent shadow is as big as about seventy three football pitches. The Sun never shines there."
+    ],
+    [
+        "moon3d.poi.ice-3",
+        "Sunlight never reaches here, yet the Sun shines most of the time only 0.6 kilometres away.",
+        "Sunlight never reaches here, yet the Sun shines most of the time only zero point six kilometres away."
+    ],
+    [
+        "moon3d.poi.wall",
+        "The ground tilts about 22 degrees here, a steep crater wall. Walk carefully!",
+        "The ground tilts about twenty two degrees here, a steep crater wall. Walk carefully!"
+    ],
+    [
+        "moon3d.poi.low",
+        "This is the lowest spot you can walk to, 980 metres below the landing site.",
+        "This is the lowest spot you can walk to, nine hundred and eighty metres below the landing site."
+    ],
+    [
+        "moon3d.poi.flat",
+        "The ground here is almost flat, tilting only 3 degrees. Flat places are best for landing and building.",
+        "The ground here is almost flat, tilting only three degrees. Flat places are best for landing and building."
+    ]
+]

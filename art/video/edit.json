@@ -1,0 +1,9 @@
+{
+  "xfade": 0.3,
+  "endcard": 3.6,
+  "S1": { "target": 3.6 },
+  "S2": { "target": 6.6 },
+  "S3": { "target": 3.8, "tail": 2.8 },
+  "S4": { "target": 4.4, "tail": 3.4 },
+  "S5": { "target": 6.0, "speed": 1.3 }
+}

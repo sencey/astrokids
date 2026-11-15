@@ -1,0 +1,35 @@
+:root {
+  /* Night sky (the theme) */
+  --sky-0: #070b1f;
+  --sky-1: #0e1a3d;
+  --sky-2: #1c2e66;
+  --star: #fff6d6;
+  /* Warm habitat */
+  --cream: #f7ecd4;
+  --cream-2: #ecd9b4;
+  --cream-3: #d9bd8c;
+  --brick: #c98a5a;
+  --brick-dark: #a86a3f;
+  --ink: #1b2340;
+  --ink-soft: #4a5278;
+  /* One accent: Pati's collar */
+  --accent: #ff8a1f;
+  --accent-soft: #ffb457;
+  /* Objects */
+  --water: #5cc8ff;
+  --food: #8bd96b;
+  --spark: #ffe27a;
+  --moon: #cfd2dd;
+  --moon-2: #9a9fb0;
+  --glass: rgba(255, 255, 255, 0.18);
+
+  --radius: 24px;
+  --radius-lg: 36px;
+  --tap: 76px;
+  --tap-lg: 96px;
+  --gutter: clamp(12px, 3vw, 28px);
+  --safe-bottom: max(24px, env(safe-area-inset-bottom));
+
+  --font: ui-rounded, 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', 'Arial Rounded MT Bold', 'Nunito', 'Quicksand',
+    system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

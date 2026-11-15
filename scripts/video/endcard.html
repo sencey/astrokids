@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>endcard</title>
+<style>
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#05070f}
+  body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;
+    background:radial-gradient(ellipse at 50% 38%,#16224a 0%,#0a1028 45%,#03050c 100%)}
+  .stars{position:absolute;inset:0}
+  img{width:760px;height:auto;position:relative;filter:drop-shadow(0 0 40px rgba(120,170,255,.35))}
+  h1{position:relative;margin:0;font-size:76px;font-weight:800;letter-spacing:.5px;text-align:center}
+  h1 b{color:#ffd24a}
+  p{position:relative;margin:0;font-size:30px;letter-spacing:3px;color:#9fb2dd;text-transform:uppercase}
+</style></head><body>
+<canvas class="stars" id="c" width="1920" height="1080"></canvas>
+<img src="../../public/brand/astrakids-logo.webp" alt="AstroKids">
+<h1>Real <b>NASA</b> data. Real decisions.</h1>
+<p>NASA Space Apps Challenge 2026</p>
+<script>
+  const c=document.getElementById('c').getContext('2d');let s=7;const r=()=>(s=(s*16807)%2147483647)/2147483647;
+  for(let i=0;i<260;i++){c.fillStyle=`rgba(255,255,255,${0.2+r()*0.7})`;c.beginPath();c.arc(r()*1920,r()*1080,r()*1.8+.3,0,7);c.fill();}
+</script>
+</body></html>

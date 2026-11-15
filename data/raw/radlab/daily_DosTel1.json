@@ -1,0 +1,451 @@
+{
+ "instrumentId": "DosTel1",
+ "label": "ISS DosTel1",
+ "place": "iss",
+ "unit": "uGy/day",
+ "range": [
+  "2024-04-01",
+  "2024-05-31"
+ ],
+ "quietBaselineWindow": [
+  "2024-04-01",
+  "2024-05-05"
+ ],
+ "quietBaseline": 571.8520214250836,
+ "quietDays": 35,
+ "provenance": {
+  "sourceId": "radlab",
+  "sourceUrl": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp>=2024-04-01&timestamp<2024-06-01&absorbed_dose_rate&format=json",
+  "fetchedAt": "2026-11-14T10:59:30.843Z",
+  "isLive": true
+ },
+ "days": [
+  {
+   "date": "2024-04-01",
+   "samples": 891,
+   "meanRateUGyPerHour": 24.899235250280608,
+   "doseUGyPerDay": 597.5816460067346,
+   "ratio": 1.0449935011465579
+  },
+  {
+   "date": "2024-04-02",
+   "samples": 897,
+   "meanRateUGyPerHour": 24.812645103678918,
+   "doseUGyPerDay": 595.503482488294,
+   "ratio": 1.0413594079885733
+  },
+  {
+   "date": "2024-04-03",
+   "samples": 904,
+   "meanRateUGyPerHour": 24.988395880530945,
+   "doseUGyPerDay": 599.7215011327427,
+   "ratio": 1.0487354746743867
+  },
+  {
+   "date": "2024-04-04",
+   "samples": 890,
+   "meanRateUGyPerHour": 24.33411336292132,
+   "doseUGyPerDay": 584.0187207101117,
+   "ratio": 1.0212759574665977
+  },
+  {
+   "date": "2024-04-05",
+   "samples": 909,
+   "meanRateUGyPerHour": 28.054565861386138,
+   "doseUGyPerDay": 673.3095806732673,
+   "ratio": 1.177419254364698
+  },
+  {
+   "date": "2024-04-06",
+   "samples": 890,
+   "meanRateUGyPerHour": 22.533252677528044,
+   "doseUGyPerDay": 540.7980642606731,
+   "ratio": 0.9456958163984057
+  },
+  {
+   "date": "2024-04-07",
+   "samples": 910,
+   "meanRateUGyPerHour": 30.954513613186858,
+   "doseUGyPerDay": 742.9083267164846,
+   "ratio": 1.2991268700338248
+  },
+  {
+   "date": "2024-04-08",
+   "samples": 874,
+   "meanRateUGyPerHour": 21.31878076201372,
+   "doseUGyPerDay": 511.6507382883293,
+   "ratio": 0.8947257666647226
+  },
+  {
+   "date": "2024-04-09",
+   "samples": 912,
+   "meanRateUGyPerHour": 30.472058283991245,
+   "doseUGyPerDay": 731.3293988157899,
+   "ratio": 1.278878750823125
+  },
+  {
+   "date": "2024-04-10",
+   "samples": 891,
+   "meanRateUGyPerHour": 23.77813020089788,
+   "doseUGyPerDay": 570.6751248215492,
+   "ratio": 0.9979419560315593
+  },
+  {
+   "date": "2024-04-11",
+   "samples": 911,
+   "meanRateUGyPerHour": 25.458791796926448,
+   "doseUGyPerDay": 611.0110031262348,
+   "ratio": 1.0684774736015883
+  },
+  {
+   "date": "2024-04-12",
+   "samples": 894,
+   "meanRateUGyPerHour": 25.479816732662194,
+   "doseUGyPerDay": 611.5156015838927,
+   "ratio": 1.0693598670158855
+  },
+  {
+   "date": "2024-04-13",
+   "samples": 897,
+   "meanRateUGyPerHour": 25.37600381047938,
+   "doseUGyPerDay": 609.0240914515051,
+   "ratio": 1.0650029529209093
+  },
+  {
+   "date": "2024-04-14",
+   "samples": 903,
+   "meanRateUGyPerHour": 24.77728262015506,
+   "doseUGyPerDay": 594.6547828837214,
+   "ratio": 1.0398752834724831
+  },
+  {
+   "date": "2024-04-15",
+   "samples": 900,
+   "meanRateUGyPerHour": 24.61140587666665,
+   "doseUGyPerDay": 590.6737410399996,
+   "ratio": 1.03291361910029
+  },
+  {
+   "date": "2024-04-16",
+   "samples": 891,
+   "meanRateUGyPerHour": 22.77099102132434,
+   "doseUGyPerDay": 546.5037845117841,
+   "ratio": 0.9556734330498117
+  },
+  {
+   "date": "2024-04-17",
+   "samples": 896,
+   "meanRateUGyPerHour": 23.668067279017826,
+   "doseUGyPerDay": 568.0336146964278,
+   "ratio": 0.9933227363275902
+  },
+  {
+   "date": "2024-04-18",
+   "samples": 901,
+   "meanRateUGyPerHour": 23.827167559378484,
+   "doseUGyPerDay": 571.8520214250836,
+   "ratio": 1
+  },
+  {
+   "date": "2024-04-19",
+   "samples": 889,
+   "meanRateUGyPerHour": 21.148916029246326,
+   "doseUGyPerDay": 507.57398470191185,
+   "ratio": 0.8875967307713843
+  },
+  {
+   "date": "2024-04-20",
+   "samples": 880,
+   "meanRateUGyPerHour": 22.326202619318202,
+   "doseUGyPerDay": 535.8288628636369,
+   "ratio": 0.937006153319743
+  },
+  {
+   "date": "2024-04-21",
+   "samples": 890,
+   "meanRateUGyPerHour": 21.507046335955057,
+   "doseUGyPerDay": 516.1691120629214,
+   "ratio": 0.9026270656114886
+  },
+  {
+   "date": "2024-04-22",
+   "samples": 893,
+   "meanRateUGyPerHour": 21.82026107390814,
+   "doseUGyPerDay": 523.6862657737953,
+   "ratio": 0.9157723434617633
+  },
+  {
+   "date": "2024-04-23",
+   "samples": 893,
+   "meanRateUGyPerHour": 23.47413058454649,
+   "doseUGyPerDay": 563.3791340291158,
+   "ratio": 0.9851834266934075
+  },
+  {
+   "date": "2024-04-24",
+   "samples": 890,
+   "meanRateUGyPerHour": 23.928071564044963,
+   "doseUGyPerDay": 574.2737175370792,
+   "ratio": 1.004234830028161
+  },
+  {
+   "date": "2024-04-25",
+   "samples": 871,
+   "meanRateUGyPerHour": 23.93255047531569,
+   "doseUGyPerDay": 574.3812114075765,
+   "ratio": 1.0044228050050257
+  },
+  {
+   "date": "2024-04-26",
+   "samples": 894,
+   "meanRateUGyPerHour": 21.12891311856824,
+   "doseUGyPerDay": 507.09391484563776,
+   "ratio": 0.8867572306239899
+  },
+  {
+   "date": "2024-04-27",
+   "samples": 905,
+   "meanRateUGyPerHour": 24.356987181215487,
+   "doseUGyPerDay": 584.5676923491717,
+   "ratio": 1.0222359464471245
+  },
+  {
+   "date": "2024-04-28",
+   "samples": 883,
+   "meanRateUGyPerHour": 22.492123447338614,
+   "doseUGyPerDay": 539.8109627361267,
+   "ratio": 0.9439696678712283
+  },
+  {
+   "date": "2024-04-29",
+   "samples": 910,
+   "meanRateUGyPerHour": 27.293421406593428,
+   "doseUGyPerDay": 655.0421137582423,
+   "ratio": 1.1454748592578983
+  },
+  {
+   "date": "2024-04-30",
+   "samples": 896,
+   "meanRateUGyPerHour": 21.969942309151804,
+   "doseUGyPerDay": 527.2786154196433,
+   "ratio": 0.9220543001765366
+  },
+  {
+   "date": "2024-05-01",
+   "samples": 908,
+   "meanRateUGyPerHour": 27.506068904185014,
+   "doseUGyPerDay": 660.1456537004403,
+   "ratio": 1.1543994407072735
+  },
+  {
+   "date": "2024-05-02",
+   "samples": 871,
+   "meanRateUGyPerHour": 20.566992703788756,
+   "doseUGyPerDay": 493.60782489093015,
+   "ratio": 0.8631740492248937
+  },
+  {
+   "date": "2024-05-03",
+   "samples": 905,
+   "meanRateUGyPerHour": 21.668638634254137,
+   "doseUGyPerDay": 520.0473272220993,
+   "ratio": 0.9094089165342382
+  },
+  {
+   "date": "2024-05-04",
+   "samples": 890,
+   "meanRateUGyPerHour": 22.093880978651686,
+   "doseUGyPerDay": 530.2531434876405,
+   "ratio": 0.9272558697374599
+  },
+  {
+   "date": "2024-05-05",
+   "samples": 897,
+   "meanRateUGyPerHour": 23.419837955406912,
+   "doseUGyPerDay": 562.076110929766,
+   "ratio": 0.9829048247989827
+  },
+  {
+   "date": "2024-05-06",
+   "samples": 886,
+   "meanRateUGyPerHour": 21.75235118284423,
+   "doseUGyPerDay": 522.0564283882616,
+   "ratio": 0.9129222400705536
+  },
+  {
+   "date": "2024-05-07",
+   "samples": 894,
+   "meanRateUGyPerHour": 21.583295625279657,
+   "doseUGyPerDay": 517.9990950067117,
+   "ratio": 0.9058271643699576
+  },
+  {
+   "date": "2024-05-08",
+   "samples": 890,
+   "meanRateUGyPerHour": 23.264907694382025,
+   "doseUGyPerDay": 558.3577846651685,
+   "ratio": 0.9764025722488716
+  },
+  {
+   "date": "2024-05-09",
+   "samples": 896,
+   "meanRateUGyPerHour": 23.354618953124962,
+   "doseUGyPerDay": 560.510854874999,
+   "ratio": 0.9801676550485529
+  },
+  {
+   "date": "2024-05-10",
+   "samples": 882,
+   "meanRateUGyPerHour": 19.90495226417232,
+   "doseUGyPerDay": 477.71885434013564,
+   "ratio": 0.8353889405682898
+  },
+  {
+   "date": "2024-05-11",
+   "samples": 1004,
+   "meanRateUGyPerHour": 18.109272494023948,
+   "doseUGyPerDay": 434.62253985657475,
+   "ratio": 0.7600262368111838
+  },
+  {
+   "date": "2024-05-12",
+   "samples": 981,
+   "meanRateUGyPerHour": 19.601687443425067,
+   "doseUGyPerDay": 470.44049864220165,
+   "ratio": 0.8226612497929806
+  },
+  {
+   "date": "2024-05-13",
+   "samples": 1006,
+   "meanRateUGyPerHour": 22.053711916500973,
+   "doseUGyPerDay": 529.2890859960233,
+   "ratio": 0.9255700184061755
+  },
+  {
+   "date": "2024-05-14",
+   "samples": 1024,
+   "meanRateUGyPerHour": 22.14148688378905,
+   "doseUGyPerDay": 531.3956852109372,
+   "ratio": 0.9292538371844394
+  },
+  {
+   "date": "2024-05-15",
+   "samples": 1072,
+   "meanRateUGyPerHour": 22.52630608955224,
+   "doseUGyPerDay": 540.6313461492538,
+   "ratio": 0.9454042757459764
+  },
+  {
+   "date": "2024-05-16",
+   "samples": 1106,
+   "meanRateUGyPerHour": 20.65728327124776,
+   "doseUGyPerDay": 495.7747985099462,
+   "ratio": 0.8669634449738427
+  },
+  {
+   "date": "2024-05-17",
+   "samples": 1033,
+   "meanRateUGyPerHour": 21.988460389157765,
+   "doseUGyPerDay": 527.7230493397864,
+   "ratio": 0.9228314836147196
+  },
+  {
+   "date": "2024-05-18",
+   "samples": 1065,
+   "meanRateUGyPerHour": 20.818400378403787,
+   "doseUGyPerDay": 499.6416090816909,
+   "ratio": 0.8737253526472796
+  },
+  {
+   "date": "2024-05-19",
+   "samples": 992,
+   "meanRateUGyPerHour": 22.511928648185496,
+   "doseUGyPerDay": 540.286287556452,
+   "ratio": 0.9448008703545923
+  },
+  {
+   "date": "2024-05-20",
+   "samples": 976,
+   "meanRateUGyPerHour": 22.996211766393476,
+   "doseUGyPerDay": 551.9090823934434,
+   "ratio": 0.9651256998586079
+  },
+  {
+   "date": "2024-05-21",
+   "samples": 976,
+   "meanRateUGyPerHour": 23.14140381762296,
+   "doseUGyPerDay": 555.3936916229511,
+   "ratio": 0.9712192504607791
+  },
+  {
+   "date": "2024-05-22",
+   "samples": 965,
+   "meanRateUGyPerHour": 23.60051006839375,
+   "doseUGyPerDay": 566.41224164145,
+   "ratio": 0.9904874345463055
+  },
+  {
+   "date": "2024-05-23",
+   "samples": 956,
+   "meanRateUGyPerHour": 23.608518109832637,
+   "doseUGyPerDay": 566.6044346359834,
+   "ratio": 0.9908235232324212
+  },
+  {
+   "date": "2024-05-24",
+   "samples": 917,
+   "meanRateUGyPerHour": 17.9353778527808,
+   "doseUGyPerDay": 430.44906846673916,
+   "ratio": 0.7527280700941456
+  },
+  {
+   "date": "2024-05-25",
+   "samples": 918,
+   "meanRateUGyPerHour": 15.13133147058824,
+   "doseUGyPerDay": 363.1519552941178,
+   "ratio": 0.6350453293653227
+  },
+  {
+   "date": "2024-05-26",
+   "samples": 978,
+   "meanRateUGyPerHour": 23.53432747546011,
+   "doseUGyPerDay": 564.8238594110426,
+   "ratio": 0.9877098239566828
+  },
+  {
+   "date": "2024-05-27",
+   "samples": 977,
+   "meanRateUGyPerHour": 24.15557639815765,
+   "doseUGyPerDay": 579.7338335557836,
+   "ratio": 1.0137829575404107
+  },
+  {
+   "date": "2024-05-28",
+   "samples": 974,
+   "meanRateUGyPerHour": 23.89548672587273,
+   "doseUGyPerDay": 573.4916814209455,
+   "ratio": 1.0028672802306018
+  },
+  {
+   "date": "2024-05-29",
+   "samples": 961,
+   "meanRateUGyPerHour": 24.7188126784599,
+   "doseUGyPerDay": 593.2515042830377,
+   "ratio": 1.0374213643673507
+  },
+  {
+   "date": "2024-05-30",
+   "samples": 961,
+   "meanRateUGyPerHour": 24.835582651404774,
+   "doseUGyPerDay": 596.0539836337146,
+   "ratio": 1.042322071623212
+  },
+  {
+   "date": "2024-05-31",
+   "samples": 969,
+   "meanRateUGyPerHour": 23.311608843137243,
+   "doseUGyPerDay": 559.4786122352939,
+   "ratio": 0.9783625680662025
+  }
+ ]
+}

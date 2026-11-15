@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "note": "Ratios are peak-day daily dose / quiet baseline (median of 2024-04-01..2024-05-05) within the SAME detector. Never compare absolute values across detectors.",
+  "peakWindow": [
+    "2024-05-08",
+    "2024-05-31"
+  ],
+  "generatedAt": "2026-11-14T11:04:35.735Z",
+  "instruments": [
+    {
+      "instrument": "LRO CRaTER",
+      "place": "lunarOrbit",
+      "peakDate": "2024-05-14",
+      "ratio": 301.53,
+      "quietBaseline": 121.6,
+      "unit": "uGy/day",
+      "provenance": {
+        "sourceId": "radlab",
+        "sourceUrl": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=CRaTER-D1D2&timestamp>=2024-04-01&timestamp<2024-06-01&absorbed_dose_rate&format=json",
+        "fetchedAt": "2026-11-14T10:58:59.698Z",
+        "isLive": false
+      }
+    },
+    {
+      "instrument": "BioSentinel BPD",
+      "place": "deepSpace",
+      "peakDate": "2024-05-14",
+      "ratio": 60.13,
+      "quietBaseline": 151.9,
+      "unit": "uGy/day",
+      "provenance": {
+        "sourceId": "radlab",
+        "sourceUrl": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=BPD&timestamp>=2024-04-01&timestamp<2024-06-01&absorbed_dose_rate&format=json",
+        "fetchedAt": "2026-11-14T10:59:15.358Z",
+        "isLive": false
+      }
+    },
+    {
+      "instrument": "ISS DosTel1",
+      "place": "iss",
+      "peakDate": "2024-05-30",
+      "ratio": 1.04,
+      "quietBaseline": 571.9,
+      "unit": "uGy/day",
+      "provenance": {
+        "sourceId": "radlab",
+        "sourceUrl": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp>=2024-04-01&timestamp<2024-06-01&absorbed_dose_rate&format=json",
+        "fetchedAt": "2026-11-14T10:59:30.843Z",
+        "isLive": false
+      }
+    },
+    {
+      "instrument": "Curiosity RAD",
+      "place": "marsSurface",
+      "peakDate": "2024-05-20",
+      "ratio": 14.28,
+      "quietBaseline": 116.5,
+      "unit": "uGy/day",
+      "provenance": {
+        "sourceId": "radlab",
+        "sourceUrl": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=MSL-RAD-Surface&timestamp>=2024-04-01&timestamp<2024-06-01&absorbed_dose_rate&format=json",
+        "fetchedAt": "2026-11-14T11:00:00.540Z",
+        "isLive": false
+      }
+    }
+  ]
+}

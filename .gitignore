@@ -1,0 +1,25 @@
+# dependencies and builds
+node_modules/
+dist/
+*.tsbuildinfo
+
+# local tooling
+scripts/video/.pw/
+.claude/settings.local.json
+
+# raw downloads (re-fetched by scripts/terrain)
+data/terrain/raw/
+
+# video working files (only the final film is kept)
+art/video/*
+!art/video/astrakids-film.mp4
+!art/video/voiceover.mp3
+!art/video/edit.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# GitHub Actions need the 'workflow' token scope to push; add later with: gh auth refresh -s workflow
+.github/workflows/

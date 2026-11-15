@@ -1,0 +1,44 @@
+.skyscreen {
+  gap: 12px;
+}
+.skyscreen .sky {
+  width: 100%;
+  height: clamp(110px, 20vh, 160px);
+}
+.skyscreen__body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.skyscreen__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 280px;
+  max-width: 600px;
+  align-items: center;
+}
+.skyscreen__panel .sky-card {
+  margin: 0;
+}
+.sky-updated {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+}
+.daypick {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.daypick__btn {
+  width: var(--tap-lg);
+  height: var(--tap-lg);
+  min-width: var(--tap-lg);
+  padding: 0;
+  border-radius: 28px;
+}
