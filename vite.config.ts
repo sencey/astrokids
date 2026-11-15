@@ -14,8 +14,9 @@ export default defineConfig({
         manualChunks(id: string) {
           if (!id.includes('node_modules')) return undefined;
           if (/node_modules[\\/]three[\\/]/.test(id)) return 'vendor-three';
-          if (/node_modules[\\/](@react-three|three-stdlib|zustand|suspend-react|its-fine|react-reconciler|scheduler)[\\/]/.test(id)) return 'vendor-r3f';
-          if (/node_modules[\\/](react|react-dom)[\\/]/.test(id)) return 'vendor-react';
+          // React and react-three-fiber share one chunk: split apart, the two chunks imported each other and the
+          // production build crashed at start-up ("Cannot read properties of undefined (reading 'useLayoutEffect')").
+          if (/node_modules[\\/](@react-three|three-stdlib|zustand|suspend-react|its-fine|react-reconciler|scheduler|react|react-dom|use-sync-external-store)[\\/]/.test(id)) return 'vendor-react';
           return undefined;
         },
       },
